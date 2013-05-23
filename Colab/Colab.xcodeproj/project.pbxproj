@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9EE9EAB7174DC48300CF1762 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE9EAB6174DC48300CF1762 /* UIKit.framework */; };
+		9EE9EAB9174DC48300CF1762 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE9EAB8174DC48300CF1762 /* Foundation.framework */; };
+		9EE9EABB174DC48300CF1762 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE9EABA174DC48300CF1762 /* CoreGraphics.framework */; };
+		9EE9EABD174DC48300CF1762 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE9EABC174DC48300CF1762 /* CoreData.framework */; };
+		9EE9EAC3174DC48300CF1762 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9EAC1174DC48300CF1762 /* InfoPlist.strings */; };
+		9EE9EAC5174DC48300CF1762 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9EAC4174DC48300CF1762 /* main.m */; };
+		9EE9EAC9174DC48300CF1762 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9EAC8174DC48300CF1762 /* AppDelegate.m */; };
+		9EE9EACB174DC48300CF1762 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9EACA174DC48300CF1762 /* Default.png */; };
+		9EE9EACD174DC48300CF1762 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9EACC174DC48300CF1762 /* Default@2x.png */; };
+		9EE9EACF174DC48300CF1762 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9EACE174DC48300CF1762 /* Default-568h@2x.png */; };
+		9EE9EAD2174DC48300CF1762 /* Colab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9EAD0174DC48300CF1762 /* Colab.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9EE9EAB3174DC48300CF1762 /* Colab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EE9EAB6174DC48300CF1762 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9EE9EAB8174DC48300CF1762 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9EE9EABA174DC48300CF1762 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9EE9EABC174DC48300CF1762 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9EE9EAC0174DC48300CF1762 /* Colab-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colab-Info.plist"; sourceTree = "<group>"; };
+		9EE9EAC2174DC48300CF1762 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9EE9EAC4174DC48300CF1762 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9EE9EAC6174DC48300CF1762 /* Colab-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Colab-Prefix.pch"; sourceTree = "<group>"; };
+		9EE9EAC7174DC48300CF1762 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9EE9EAC8174DC48300CF1762 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9EE9EACA174DC48300CF1762 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9EE9EACC174DC48300CF1762 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9EE9EACE174DC48300CF1762 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9EE9EAD1174DC48300CF1762 /* Colab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Colab.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9EE9EAB0174DC48300CF1762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EE9EAB7174DC48300CF1762 /* UIKit.framework in Frameworks */,
+				9EE9EAB9174DC48300CF1762 /* Foundation.framework in Frameworks */,
+				9EE9EABB174DC48300CF1762 /* CoreGraphics.framework in Frameworks */,
+				9EE9EABD174DC48300CF1762 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9EE9EAAA174DC48300CF1762 = {
+			isa = PBXGroup;
+			children = (
+				9EE9EABE174DC48300CF1762 /* Colab */,
+				9EE9EAB5174DC48300CF1762 /* Frameworks */,
+				9EE9EAB4174DC48300CF1762 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9EE9EAB4174DC48300CF1762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EE9EAB3174DC48300CF1762 /* Colab.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EE9EAB5174DC48300CF1762 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EE9EAB6174DC48300CF1762 /* UIKit.framework */,
+				9EE9EAB8174DC48300CF1762 /* Foundation.framework */,
+				9EE9EABA174DC48300CF1762 /* CoreGraphics.framework */,
+				9EE9EABC174DC48300CF1762 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EE9EABE174DC48300CF1762 /* Colab */ = {
+			isa = PBXGroup;
+			children = (
+				9EE9EAC7174DC48300CF1762 /* AppDelegate.h */,
+				9EE9EAC8174DC48300CF1762 /* AppDelegate.m */,
+				9EE9EAD0174DC48300CF1762 /* Colab.xcdatamodeld */,
+				9EE9EABF174DC48300CF1762 /* Supporting Files */,
+			);
+			path = Colab;
+			sourceTree = "<group>";
+		};
+		9EE9EABF174DC48300CF1762 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EE9EAC0174DC48300CF1762 /* Colab-Info.plist */,
+				9EE9EAC1174DC48300CF1762 /* InfoPlist.strings */,
+				9EE9EAC4174DC48300CF1762 /* main.m */,
+				9EE9EAC6174DC48300CF1762 /* Colab-Prefix.pch */,
+				9EE9EACA174DC48300CF1762 /* Default.png */,
+				9EE9EACC174DC48300CF1762 /* Default@2x.png */,
+				9EE9EACE174DC48300CF1762 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9EE9EAB2174DC48300CF1762 /* Colab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EE9EAD5174DC48300CF1762 /* Build configuration list for PBXNativeTarget "Colab" */;
+			buildPhases = (
+				9EE9EAAF174DC48300CF1762 /* Sources */,
+				9EE9EAB0174DC48300CF1762 /* Frameworks */,
+				9EE9EAB1174DC48300CF1762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Colab;
+			productName = Colab;
+			productReference = 9EE9EAB3174DC48300CF1762 /* Colab.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9EE9EAAB174DC48300CF1762 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "UNO IT Solutions, LLC";
+			};
+			buildConfigurationList = 9EE9EAAE174DC48300CF1762 /* Build configuration list for PBXProject "Colab" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9EE9EAAA174DC48300CF1762;
+			productRefGroup = 9EE9EAB4174DC48300CF1762 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EE9EAB2174DC48300CF1762 /* Colab */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EE9EAB1174DC48300CF1762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EE9EAC3174DC48300CF1762 /* InfoPlist.strings in Resources */,
+				9EE9EACB174DC48300CF1762 /* Default.png in Resources */,
+				9EE9EACD174DC48300CF1762 /* Default@2x.png in Resources */,
+				9EE9EACF174DC48300CF1762 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EE9EAAF174DC48300CF1762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EE9EAC5174DC48300CF1762 /* main.m in Sources */,
+				9EE9EAC9174DC48300CF1762 /* AppDelegate.m in Sources */,
+				9EE9EAD2174DC48300CF1762 /* Colab.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9EE9EAC1174DC48300CF1762 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EE9EAC2174DC48300CF1762 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9EE9EAD3174DC48300CF1762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9EE9EAD4174DC48300CF1762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9EE9EAD6174DC48300CF1762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colab/Colab-Prefix.pch";
+				INFOPLIST_FILE = "Colab/Colab-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9EE9EAD7174DC48300CF1762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colab/Colab-Prefix.pch";
+				INFOPLIST_FILE = "Colab/Colab-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9EE9EAAE174DC48300CF1762 /* Build configuration list for PBXProject "Colab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EE9EAD3174DC48300CF1762 /* Debug */,
+				9EE9EAD4174DC48300CF1762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EE9EAD5174DC48300CF1762 /* Build configuration list for PBXNativeTarget "Colab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EE9EAD6174DC48300CF1762 /* Debug */,
+				9EE9EAD7174DC48300CF1762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9EE9EAD0174DC48300CF1762 /* Colab.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9EE9EAD1174DC48300CF1762 /* Colab.xcdatamodel */,
+			);
+			currentVersion = 9EE9EAD1174DC48300CF1762 /* Colab.xcdatamodel */;
+			path = Colab.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9EE9EAAB174DC48300CF1762 /* Project object */;
+}
