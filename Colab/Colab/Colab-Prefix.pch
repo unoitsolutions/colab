@@ -8,6 +8,14 @@
 #warning "This project uses features only available in iOS SDK 3.0 and later."
 #endif
 
+#define DEBUG_LOG
+#ifdef DEBUG_LOG
+#warning Undefine DEBUG_LOG before app release.
+#define DLOG(fmt, ...) NSLog(@"%s: " fmt, __PRETTY_FUNCTION__, ##__VA_ARGS__)
+#else
+#define DLOG(...)
+#endif
+
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>

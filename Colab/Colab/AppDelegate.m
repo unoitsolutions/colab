@@ -6,14 +6,64 @@
 //  Copyright (c) 2013 UNO IT Solutions, LLC. All rights reserved.
 //
 
+#import <MessageUI/MessageUI.h>
 #import "AppDelegate.h"
+#import "MainViewController.h"
+#import "PhotoViewerVC.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    MainViewController *mainVC = [[MainViewController alloc] initWithNibName:nil bundle:nil];
+    mainVC.view.backgroundColor = [UIColor lightGrayColor];
+    [self.window setRootViewController:mainVC];
+    
+    // TODO: implement PhotoViewerVC
+//    PhotoViewerVC *vc = [[PhotoViewerVC alloc] initWithImage:nil];
+//    [mainVC presentViewController:vc animated:YES completion:^{
+//        
+//    }];
+    
+    
+    // TODO: implement MapVC
+    
+    
+    
+    // TODO: implement Forgot Password
+    
+    
+    
+    // TODO: implement camera
+    
+    
+    
+    
+    // email
+//    MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+//    if (controller) {
+//        NSString *emailAddress = @"nstinks0186@gmail.com";
+//        NSString *emailSubject = [NSString localizedStringWithFormat:@"Email Subject"];
+//        NSString *emailBody = @"Email Body";
+//        
+//        [controller setSubject:emailSubject];
+//        [controller setToRecipients:[NSArray arrayWithObject:emailAddress]];
+//        [controller setMessageBody:emailBody isHTML:NO];
+//        controller.mailComposeDelegate = (id<MFMailComposeViewControllerDelegate>)self;
+//        
+//        [mainVC presentViewController:controller animated:YES completion:^{
+//            
+//        }];
+//    }
+    
+    
+    // call
+//    NSString *phoneNumber = @"3522269617";
+//    NSString *urlString = [@"telprompt://" stringByAppendingString:phoneNumber];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

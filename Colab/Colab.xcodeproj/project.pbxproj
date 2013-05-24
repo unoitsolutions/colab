@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47029087174FEB4700A70DAE /* PhotoViewerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 47029085174FEB4500A70DAE /* PhotoViewerVC.m */; };
+		47029088174FEB4700A70DAE /* PhotoViewerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47029086174FEB4600A70DAE /* PhotoViewerVC.xib */; };
+		4702908C174FECFF00A70DAE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4702908A174FECFD00A70DAE /* MainViewController.m */; };
+		4702908D174FECFF00A70DAE /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4702908B174FECFE00A70DAE /* MainViewController.xib */; };
+		4702908F174FEE6A00A70DAE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4702908E174FEE6A00A70DAE /* MessageUI.framework */; };
+		47029093174FF0B900A70DAE /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 47029091174FF0B400A70DAE /* MapVC.m */; };
+		47029094174FF0B900A70DAE /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47029092174FF0B700A70DAE /* MapVC.xib */; };
+		47029096174FF10300A70DAE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47029095174FF10200A70DAE /* MapKit.framework */; };
 		9EE9EAE5174DC64E00CF1762 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE9EAE4174DC64E00CF1762 /* UIKit.framework */; };
 		9EE9EAE7174DC64E00CF1762 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE9EAE6174DC64E00CF1762 /* Foundation.framework */; };
 		9EE9EAE9174DC64E00CF1762 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE9EAE8174DC64E00CF1762 /* CoreGraphics.framework */; };
@@ -19,6 +27,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47029084174FEB4500A70DAE /* PhotoViewerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewerVC.h; sourceTree = "<group>"; };
+		47029085174FEB4500A70DAE /* PhotoViewerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewerVC.m; sourceTree = "<group>"; };
+		47029086174FEB4600A70DAE /* PhotoViewerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewerVC.xib; sourceTree = "<group>"; };
+		47029089174FECFC00A70DAE /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4702908A174FECFD00A70DAE /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4702908B174FECFE00A70DAE /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		4702908E174FEE6A00A70DAE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		47029090174FF0B200A70DAE /* MapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapVC.h; sourceTree = "<group>"; };
+		47029091174FF0B400A70DAE /* MapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapVC.m; sourceTree = "<group>"; };
+		47029092174FF0B700A70DAE /* MapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
+		47029095174FF10200A70DAE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9EE9EAE1174DC64E00CF1762 /* Colab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE9EAE4174DC64E00CF1762 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9EE9EAE6174DC64E00CF1762 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47029096174FF10300A70DAE /* MapKit.framework in Frameworks */,
+				4702908F174FEE6A00A70DAE /* MessageUI.framework in Frameworks */,
 				9EE9EAE5174DC64E00CF1762 /* UIKit.framework in Frameworks */,
 				9EE9EAE7174DC64E00CF1762 /* Foundation.framework in Frameworks */,
 				9EE9EAE9174DC64E00CF1762 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +89,8 @@
 		9EE9EAE3174DC64E00CF1762 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47029095174FF10200A70DAE /* MapKit.framework */,
+				4702908E174FEE6A00A70DAE /* MessageUI.framework */,
 				9EE9EAE4174DC64E00CF1762 /* UIKit.framework */,
 				9EE9EAE6174DC64E00CF1762 /* Foundation.framework */,
 				9EE9EAE8174DC64E00CF1762 /* CoreGraphics.framework */,
@@ -78,6 +101,15 @@
 		9EE9EAEA174DC64E00CF1762 /* Colab */ = {
 			isa = PBXGroup;
 			children = (
+				47029089174FECFC00A70DAE /* MainViewController.h */,
+				4702908A174FECFD00A70DAE /* MainViewController.m */,
+				4702908B174FECFE00A70DAE /* MainViewController.xib */,
+				47029084174FEB4500A70DAE /* PhotoViewerVC.h */,
+				47029085174FEB4500A70DAE /* PhotoViewerVC.m */,
+				47029086174FEB4600A70DAE /* PhotoViewerVC.xib */,
+				47029090174FF0B200A70DAE /* MapVC.h */,
+				47029091174FF0B400A70DAE /* MapVC.m */,
+				47029092174FF0B700A70DAE /* MapVC.xib */,
 				9EE9EAF3174DC64E00CF1762 /* AppDelegate.h */,
 				9EE9EAF4174DC64E00CF1762 /* AppDelegate.m */,
 				9EE9EAEB174DC64E00CF1762 /* Supporting Files */,
@@ -154,6 +186,9 @@
 				9EE9EAF7174DC64E00CF1762 /* Default.png in Resources */,
 				9EE9EAF9174DC64E00CF1762 /* Default@2x.png in Resources */,
 				9EE9EAFB174DC64E00CF1762 /* Default-568h@2x.png in Resources */,
+				47029088174FEB4700A70DAE /* PhotoViewerVC.xib in Resources */,
+				4702908D174FECFF00A70DAE /* MainViewController.xib in Resources */,
+				47029094174FF0B900A70DAE /* MapVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +201,9 @@
 			files = (
 				9EE9EAF1174DC64E00CF1762 /* main.m in Sources */,
 				9EE9EAF5174DC64E00CF1762 /* AppDelegate.m in Sources */,
+				47029087174FEB4700A70DAE /* PhotoViewerVC.m in Sources */,
+				4702908C174FECFF00A70DAE /* MainViewController.m in Sources */,
+				47029093174FF0B900A70DAE /* MapVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +320,7 @@
 				9EE9EB00174DC64E00CF1762 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
