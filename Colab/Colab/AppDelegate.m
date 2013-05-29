@@ -9,7 +9,6 @@
 #import <MessageUI/MessageUI.h>
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "PhotoViewerVC.h"
 
 @implementation AppDelegate
 
@@ -22,10 +21,7 @@
     [self.window setRootViewController:mainVC];
     
     // TODO: implement PhotoViewerVC
-//    PhotoViewerVC *vc = [[PhotoViewerVC alloc] initWithImage:nil];
-//    [mainVC presentViewController:vc animated:YES completion:^{
-//        
-//    }];
+    
     
     
     // TODO: implement MapVC

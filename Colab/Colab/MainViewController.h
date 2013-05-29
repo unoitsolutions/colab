@@ -10,4 +10,7 @@
 
 @interface MainViewController : UIViewController
 
+- (IBAction)photoViewerButtonClicked:(id)sender;
+- (IBAction)photoCaptureButtonClicked:(id)sender;
+
 @end

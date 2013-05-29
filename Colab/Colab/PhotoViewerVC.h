@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class PhotoPiewerVC;
+@class PhotoViewerVC;
+
 @protocol PhotoViewerDelegate <NSObject>
 
-- (void)photoViewerVCDidCancel:(PhotoPiewerVC *)vc;
+- (void)photoViewerVCDidCancel:(PhotoViewerVC *)vc;
 
 @end
 
