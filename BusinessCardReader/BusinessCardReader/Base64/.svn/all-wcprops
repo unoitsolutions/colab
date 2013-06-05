@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/Base64
+END
+NSData+Base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/Base64/NSData+Base64.h
+END
+NSString+Base64.m
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/Base64/NSString+Base64.m
+END
+NSData+Base64.m
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/Base64/NSData+Base64.m
+END
+NSString+Base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/Base64/NSString+Base64.h
+END

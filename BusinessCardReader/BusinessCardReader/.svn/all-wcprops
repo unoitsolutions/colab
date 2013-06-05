@@ -1,0 +1,803 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader
+END
+ThankYouVC_old.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/13750/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ThankYouVC_old.h
+END
+ContactEditVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13837/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactEditVC.h
+END
+TopicsVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13744/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/TopicsVC.h
+END
+ThankYouVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13750/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ThankYouVC.h
+END
+Default@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/Default@2x.png
+END
+AboutVC_old.xib
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AboutVC_old.xib
+END
+ThankYouVC_old.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/13750/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ThankYouVC_old.m
+END
+ContactEditVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactEditVC.m
+END
+TopicsVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/TopicsVC.m
+END
+ThankYouVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13750/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ThankYouVC.m
+END
+AboutVC_old.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AboutVC_old.h
+END
+AboutVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13744/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AboutVC.h
+END
+ContactCreateVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/13910/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactCreateVC.xib
+END
+AboutVC_old.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AboutVC_old.m
+END
+AboutVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13744/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AboutVC.m
+END
+FollowupActionsVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FollowupActionsVC.xib
+END
+NSString+Util.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/NSString+Util.h
+END
+FollowupActionsVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/13744/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FollowupActionsVC.h
+END
+AEEventManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AEEventManager.h
+END
+AESessionManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AESessionManager.h
+END
+NSString+Util.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/NSString+Util.m
+END
+FollowupActionsVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/13750/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FollowupActionsVC.m
+END
+AEEventManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AEEventManager.m
+END
+AESessionManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AESessionManager.m
+END
+UIColor+Hex.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/UIColor+Hex.h
+END
+UIColor+Hex.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/UIColor+Hex.m
+END
+ContactDetailVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13910/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactDetailVC.h
+END
+DBProcessQueueItem.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/13665/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DBProcessQueueItem.h
+END
+ContactDetailVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactDetailVC.m
+END
+MainVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/13836/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/MainVC.h
+END
+DBProcessQueueItem.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/13665/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DBProcessQueueItem.m
+END
+ContactListVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13744/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactListVC.h
+END
+MainVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/MainVC.m
+END
+Default-568h@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/Default-568h@2x.png
+END
+ContactEditVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13910/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactEditVC.xib
+END
+TopicsVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/TopicsVC.xib
+END
+ContactListVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactListVC.m
+END
+AEContact.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AEContact.h
+END
+ContactEditCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13836/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactEditCell.h
+END
+APIManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13866/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/APIManager.h
+END
+AEContact.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AEContact.m
+END
+ContactEditCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13836/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactEditCell.m
+END
+ContactCreateVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactCreateVC.h
+END
+APIManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/APIManager.m
+END
+ContactCreateVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactCreateVC.m
+END
+ShareVC_old.xib
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ShareVC_old.xib
+END
+ShareVC_old.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ShareVC_old.h
+END
+ContactUsVC_old.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactUsVC_old.h
+END
+ShareVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13744/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ShareVC.h
+END
+ContactInfoVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactInfoVC.xib
+END
+ShareVC_old.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ShareVC_old.m
+END
+ContactUsVC_old.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactUsVC_old.m
+END
+ShareVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13744/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ShareVC.m
+END
+ContactsVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactsVC.xib
+END
+BCREvent.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13665/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/BCREvent.h
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AppDelegate.h
+END
+AECompany.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AECompany.h
+END
+BCREvent.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/BCREvent.m
+END
+AppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13744/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AppDelegate.m
+END
+AECompany.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AECompany.m
+END
+BCRContact.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13836/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/BCRContact.h
+END
+ThankYouVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/13834/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ThankYouVC.xib
+END
+BusinessCardReader-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/13744/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/BusinessCardReader-Prefix.pch
+END
+CardCaptureVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13775/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/CardCaptureVC.h
+END
+BCRContact.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/BCRContact.m
+END
+AEEvent.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AEEvent.h
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/main.m
+END
+CardCaptureVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13775/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/CardCaptureVC.m
+END
+AEEvent.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AEEvent.m
+END
+AboutVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13834/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AboutVC.xib
+END
+NSString+SHA1.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/NSString+SHA1.h
+END
+NSString+SHA1.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/NSString+SHA1.m
+END
+ContactUsVC_old.xib
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactUsVC_old.xib
+END
+ContactUsVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13834/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactUsVC.xib
+END
+DetailVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13836/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DetailVC.h
+END
+AEContactManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AEContactManager.h
+END
+ActionPickerVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/13910/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ActionPickerVC.xib
+END
+DetailVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13834/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DetailVC.m
+END
+ContactInfoVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactInfoVC.h
+END
+DBContact.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DBContact.h
+END
+AEContactManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AEContactManager.m
+END
+ContactDetailVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/13910/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactDetailVC.xib
+END
+PhotoViewerVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/PhotoViewerVC.h
+END
+ContactInfoVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactInfoVC.m
+END
+DBContact.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DBContact.m
+END
+PhotoViewerVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/PhotoViewerVC.m
+END
+DBRow.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/13665/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DBRow.h
+END
+DBRow.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DBRow.m
+END
+XMLReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/XMLReader.h
+END
+BCRAccount.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/BCRAccount.h
+END
+XMLReader.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/XMLReader.m
+END
+BCRAccount.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/BCRAccount.m
+END
+AESession.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AESession.h
+END
+AESession.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AESession.m
+END
+TopicPickerVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13910/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/TopicPickerVC.xib
+END
+TopicPickerVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/TopicPickerVC.h
+END
+AETheme.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AETheme.h
+END
+TopicPickerVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/TopicPickerVC.m
+END
+AETheme.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/AETheme.m
+END
+BCRAccountManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/BCRAccountManager.h
+END
+QueueManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/QueueManager.h
+END
+BCRAccountManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/BCRAccountManager.m
+END
+QueueManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/13838/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/QueueManager.m
+END
+DB.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/13834/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DB.h
+END
+ShareVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13836/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ShareVC.xib
+END
+DBEvent.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13775/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DBEvent.h
+END
+EventsVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EventsVC.xib
+END
+DB.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DB.m
+END
+LoginVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13874/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/LoginVC.xib
+END
+ContactUsVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13834/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactUsVC.h
+END
+DBEvent.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DBEvent.m
+END
+MenuVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/13836/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/MenuVC.h
+END
+EventsVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13665/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EventsVC.h
+END
+LoginVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13874/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/LoginVC.h
+END
+ContactUsVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13834/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactUsVC.m
+END
+MenuVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/13836/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/MenuVC.m
+END
+DBAccount.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DBAccount.h
+END
+EventsVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13838/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EventsVC.m
+END
+ActionPickerVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ActionPickerVC.h
+END
+MenuCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/MenuCell.h
+END
+BusinessCardReader-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/BusinessCardReader-Info.plist
+END
+LoginVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13874/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/LoginVC.m
+END
+ContactsVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactsVC.h
+END
+DBAccount.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/DBAccount.m
+END
+ScanVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13836/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ScanVC.xib
+END
+ActionPickerVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ActionPickerVC.m
+END
+MenuCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/13707/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/MenuCell.m
+END
+ContactListVC.xib
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13910/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactListVC.xib
+END
+ContactsVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ContactsVC.m
+END
+ScanVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/13836/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ScanVC.h
+END
+Default.png
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/Default.png
+END
+ScanVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/13974/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ScanVC.m
+END
+ThankYouVC_old.xib
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/13750/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ThankYouVC_old.xib
+END

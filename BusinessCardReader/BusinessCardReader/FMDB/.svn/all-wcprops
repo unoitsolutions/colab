@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB
+END
+FMDatabaseAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB/FMDatabaseAdditions.m
+END
+FMDatabase.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13834/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB/FMDatabase.m
+END
+FMDatabaseQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB/FMDatabaseQueue.h
+END
+FMResultSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB/FMResultSet.h
+END
+FMDatabasePool.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB/FMDatabasePool.h
+END
+FMDatabaseQueue.m
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB/FMDatabaseQueue.m
+END
+FMResultSet.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB/FMResultSet.m
+END
+FMDatabaseAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB/FMDatabaseAdditions.h
+END
+FMDatabasePool.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB/FMDatabasePool.m
+END
+FMDatabase.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/FMDB/FMDatabase.h
+END

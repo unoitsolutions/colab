@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK
+END
+ProcessingOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK/ProcessingOperation.h
+END
+Client.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK/Client.h
+END
+HTTPOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK/HTTPOperation.h
+END
+ProcessingParams.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK/ProcessingParams.h
+END
+ProcessingOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK/ProcessingOperation.m
+END
+Task.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK/Task.h
+END
+Client.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK/Client.m
+END
+HTTPOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK/HTTPOperation.m
+END
+ProcessingParams.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK/ProcessingParams.m
+END
+Task.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/OcrSDK/Task.m
+END

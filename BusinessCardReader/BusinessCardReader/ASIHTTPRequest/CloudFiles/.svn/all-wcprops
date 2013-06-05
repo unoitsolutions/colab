@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles
+END
+ASICloudFilesCDNRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m
+END
+ASICloudFilesContainer.h
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.h
+END
+ASICloudFilesObjectRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m
+END
+ASICloudFilesObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.h
+END
+ASICloudFilesContainer.m
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m
+END
+ASICloudFilesRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.h
+END
+ASICloudFilesContainerRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.h
+END
+ASICloudFilesContainerXMLParserDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.h
+END
+ASICloudFilesObject.m
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m
+END
+ASICloudFilesCDNRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.h
+END
+ASICloudFilesRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m
+END
+ASICloudFilesObjectRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.h
+END
+ASICloudFilesContainerRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m
+END
+ASICloudFilesContainerXMLParserDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m
+END

@@ -1,0 +1,39 @@
+//
+// Prefix header for all source files of the 'BusinessCardReader' target in the 'BusinessCardReader' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+
+#define OCR_APP_ID @"atEvent Mobile Web App"
+#define OCR_APP_PASSWORD @"VuUx+CrMOhVQtkXY+6QEbUMP"
+#define SHARE_URL @"http://at-event.com/atevent-apps/"
+
+#define DB_PATH [NSString stringWithFormat:@"%@bcr.db",[[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] absoluteString]]
+
+#define MDEBUG
+#ifdef MDEBUG
+//    #define DLOG(fmt, ...) NSLog(@"%s: " fmt, __PRETTY_FUNCTION__, ##__VA_ARGS__);
+    #define DLOG(fmt, ...) TFLog(@"%s: " fmt, __PRETTY_FUNCTION__, ##__VA_ARGS__);
+    #define FMDBQuickCheck(SomeBool) { if (!(SomeBool)) { NSLog(@"Failure on line %d", __LINE__); abort(); } }
+#else
+    #define DLOG(...)
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+//    #import "AETheme.h"
+    #import "MBProgressHUD.h"
+    #import "TSMessage.h"
+    #import "DB.h"
+    #import "NSString+SHA1.h"
+    #import "TestFlight.h"
+    #import "NSString+Util.h"
+    #import "BCRAccountManager.h"
+#endif

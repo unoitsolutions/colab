@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests
+END
+PerformanceTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/PerformanceTests.m
+END
+ASIFormDataRequestTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIFormDataRequestTests.m
+END
+BlocksTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/BlocksTests.h
+END
+ASIWebPageRequestTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIWebPageRequestTests.h
+END
+ClientCertificateTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ClientCertificateTests.h
+END
+ProxyTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ProxyTests.h
+END
+BlocksTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/BlocksTests.m
+END
+ASIDataCompressorTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIDataCompressorTests.h
+END
+StressTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/StressTests.h
+END
+ASITestCase.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASITestCase.h
+END
+ASIHTTPRequestTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIHTTPRequestTests.h
+END
+ASIWebPageRequestTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIWebPageRequestTests.m
+END
+GHUnitTestMain.m
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/GHUnitTestMain.m
+END
+ClientCertificateTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ClientCertificateTests.m
+END
+ProxyTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ProxyTests.m
+END
+ASIDownloadCacheTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIDownloadCacheTests.h
+END
+ASIDataCompressorTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIDataCompressorTests.m
+END
+StressTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/StressTests.m
+END
+ASIHTTPRequestTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIHTTPRequestTests.m
+END
+ASITestCase.m
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASITestCase.m
+END
+ASIS3RequestTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIS3RequestTests.h
+END
+ASINetworkQueueTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASINetworkQueueTests.h
+END
+ASIDownloadCacheTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIDownloadCacheTests.m
+END
+ASICloudFilesRequestTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASICloudFilesRequestTests.h
+END
+ASIS3RequestTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIS3RequestTests.m
+END
+ASINetworkQueueTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASINetworkQueueTests.m
+END
+PerformanceTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/PerformanceTests.h
+END
+ASIFormDataRequestTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASIFormDataRequestTests.h
+END
+ASICloudFilesRequestTests.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/ASIHTTPRequest/Tests/ASICloudFilesRequestTests.m
+END

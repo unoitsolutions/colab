@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage
+END
+NSData+Storage.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/NSData+Storage.h
+END
+NSDictionary+Storage.m
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/NSDictionary+Storage.m
+END
+EDStorage.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/EDStorage.h
+END
+EDStorageManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/EDStorageManager.m
+END
+EDStorageOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/EDStorageOperation.h
+END
+NSData+Storage.m
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/NSData+Storage.m
+END
+UIImage+Storage.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/UIImage+Storage.h
+END
+EDStorageOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/EDStorageOperation.m
+END
+UIImage+Storage.m
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/UIImage+Storage.m
+END
+NSDictionary+Storage.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/NSDictionary+Storage.h
+END
+EDStorageManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/13661/CEA/trunk/BCR_iOS/trunk/BusinessCardReader/BusinessCardReader/EDStorage/EDStorageManager.h
+END
