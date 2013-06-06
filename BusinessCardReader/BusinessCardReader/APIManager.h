@@ -24,8 +24,9 @@ typedef enum{
 - (void)APIManager:(APIManager *)manager didGetEventsWithInfo:(NSDictionary *)info;
 - (void)APIManager:(APIManager *)manager didGetContactsWithInfo:(NSDictionary *)info;
 - (void)APIManager:(APIManager *)manager didSaveContactsWithInfo:(NSDictionary *)info;
-- (void)APIManager:(APIManager *)manager didLRSUploadWithInfo:(NSDictionary *)info;
+//- (void)APIManager:(APIManager *)manager didLRSUploadWithInfo:(NSDictionary *)info;
 - (void)APIManager:(APIManager *)manager didInitRetrievePasswordWithInfo:(NSDictionary *)info;
+- (void)APIManager:(APIManager *)manager didCardImageUpload:(NSDictionary *)info;
 
 @end
 
@@ -38,5 +39,6 @@ typedef enum{
 - (void)doGetContacts:(NSDictionary *)info;
 - (void)doSaveContacts:(NSDictionary *)info;
 - (void)doInitRetrievePassword:(NSDictionary *)info;
+- (void)doCardImageUpload:(NSDictionary *)info;
 
 @end

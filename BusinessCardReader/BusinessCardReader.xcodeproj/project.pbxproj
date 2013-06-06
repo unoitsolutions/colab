@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E08ADD3176030180055F072 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E08ADD2176030180055F072 /* AddressBookUI.framework */; };
+		9E08ADD5176035B60055F072 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E08ADD4176035B60055F072 /* AddressBook.framework */; };
 		9E38CCBA1739F1E700EF76A0 /* ScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E38CCB81739F1E600EF76A0 /* ScanVC.m */; };
 		9E38CCBB1739F1E700EF76A0 /* ScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E38CCB91739F1E700EF76A0 /* ScanVC.xib */; };
 		9E4F0B381741C87800EFB911 /* TopicPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4F0B361741C87800EFB911 /* TopicPickerVC.m */; };
@@ -289,6 +291,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E08ADD2176030180055F072 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		9E08ADD4176035B60055F072 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		9E38CCB71739F1E600EF76A0 /* ScanVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanVC.h; sourceTree = "<group>"; };
 		9E38CCB81739F1E600EF76A0 /* ScanVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanVC.m; sourceTree = "<group>"; };
 		9E38CCB91739F1E700EF76A0 /* ScanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanVC.xib; sourceTree = "<group>"; };
@@ -656,6 +660,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E08ADD5176035B60055F072 /* AddressBook.framework in Frameworks */,
+				9E08ADD3176030180055F072 /* AddressBookUI.framework in Frameworks */,
 				9EE9EB0E175182D200CF1762 /* CoreLocation.framework in Frameworks */,
 				9EE9EB0C1751814E00CF1762 /* MapKit.framework in Frameworks */,
 				9EE9EB0A17517AA900CF1762 /* MessageUI.framework in Frameworks */,
@@ -817,6 +823,8 @@
 		9E98769F16F80118002F1581 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E08ADD4176035B60055F072 /* AddressBook.framework */,
+				9E08ADD2176030180055F072 /* AddressBookUI.framework */,
 				9EE9EB0D175182D100CF1762 /* CoreLocation.framework */,
 				9EE9EB0B1751814D00CF1762 /* MapKit.framework */,
 				9EE9EB0917517AA800CF1762 /* MessageUI.framework */,

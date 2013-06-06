@@ -71,9 +71,13 @@ NSString *QueueManagerDidDequeueContactNotification = @"QueueManagerDidDequeueCo
     // notify observers
     [[NSNotificationCenter defaultCenter] postNotificationName:QueueManagerDidEnqueueContactNotification object:nil];
     
-    // start ocr process
+    // upload image
     [contact setDelegate:self];
-    [contact performSelectorInBackground:@selector(doOCRProcessing) withObject:nil];
+    [contact performSelectorInBackground:@selector(doCardImageUpload) withObject:nil];
+    
+//    // start ocr process
+//    [contact setDelegate:self];
+//    [contact performSelectorInBackground:@selector(doOCRProcessing) withObject:nil];
 }
 
 - (void)dequeueContact:(BCRContact *)contact
@@ -95,34 +99,34 @@ NSString *QueueManagerDidDequeueContactNotification = @"QueueManagerDidDequeueCo
 
 #pragma mark - AEContactDelegate
 
-- (void)contact:(BCRContact *)contact didFinishOCRProcessingWithInfo:(NSDictionary *)info
-{
-    NSError *error = [info objectForKey:@"error"];
-    if (error) {
-        DLOG(@"error: %@",error);
-        if (![[error domain] isEqualToString:@"ABBYY"] || ![[error.userInfo objectForKey:NSLocalizedDescriptionKey] isEqualToString:@"Business card not found on image"]) {
-            // create success notification
-            [self _showWarningNotification:@"A new contact was created. However, the image is not a valid business card."];
-        }else{
-            // create error notification
-            [self _showErrorNotification:[error localizedDescription]];
-            
-#warning implement
-            // TODO: push to back of queue
-            
-            return;
-        }
-    }
-    
-    DLOG(@"inf: %@",info);
-    
-    // update status
-    [contact setStatus:BCRContactOCRProcessedStatus];
-    [[DB defaultManager] updateContact:contact];
-    
-    // upload contact
-    [contact doContactUpload];
-}
+//- (void)contact:(BCRContact *)contact didFinishOCRProcessingWithInfo:(NSDictionary *)info
+//{
+//    NSError *error = [info objectForKey:@"error"];
+//    if (error) {
+//        DLOG(@"error: %@",error);
+//        if (![[error domain] isEqualToString:@"ABBYY"] || ![[error.userInfo objectForKey:NSLocalizedDescriptionKey] isEqualToString:@"Business card not found on image"]) {
+//            // create success notification
+//            [self _showWarningNotification:@"A new contact was created. However, the image is not a valid business card."];
+//        }else{
+//            // create error notification
+//            [self _showErrorNotification:[error localizedDescription]];
+//            
+//#warning implement
+//            // TODO: push to back of queue
+//            
+//            return;
+//        }
+//    }
+//    
+//    DLOG(@"info: %@",info);
+//    
+//    // update status
+//    [contact setStatus:BCRContactOCRProcessedStatus];
+//    [[DB defaultManager] updateContact:contact];
+//    
+//    // upload contact
+//    [contact doContactUpload];
+//}
 
 - (void)contact:(BCRContact *)contact didFinishContactUploadWithInfo:(NSDictionary *)info
 {
@@ -164,26 +168,49 @@ NSString *QueueManagerDidDequeueContactNotification = @"QueueManagerDidDequeueCo
     }
 }
 
-- (void)contact:(BCRContact *)contact didFinishLRSUploadWithInfo:(NSDictionary *)info
+//- (void)contact:(BCRContact *)contact didFinishLRSUploadWithInfo:(NSDictionary *)info
+//{
+//    NSError *error = [info objectForKey:@"error"];
+//    if (error) {
+//        // create error notification
+//        [self _showErrorNotification:[error localizedDescription]];
+//        
+//#warning implement
+//        // TODO: push to back of queue
+//    }else{
+//#warning implement
+//        // TODO: create success notification
+//        [self _showSuccessNotification:@"A new contact was submitted."];
+//
+//        // update status
+//        [contact setStatus:BCRContactLRSSubmittedStatus];
+//        [[DB defaultManager] updateContact:contact];
+//        
+//        // dequeue contact
+//        [self dequeueContact:contact];
+//    }
+//}
+
+- (void)contact:(BCRContact *)contact didFinishCardImageUpload:(NSDictionary *)info
 {
     NSError *error = [info objectForKey:@"error"];
     if (error) {
+        DLOG(@"error: %@",error);
+        
         // create error notification
         [self _showErrorNotification:[error localizedDescription]];
-        
-#warning implement
-        // TODO: push to back of queue
     }else{
-#warning implement
-        // TODO: create success notification
-        [self _showSuccessNotification:@"A new contact was submitted."];
+        DLOG(@"info: %@",info);
         
-        // update status
-        [contact setStatus:BCRContactLRSSubmittedStatus];
+        // update status & contactID
+        [contact setStatus:BCRContactUploadedStatus];
+//        [contact setContactID:[info objectForKey:@"contactID"]];
         [[DB defaultManager] updateContact:contact];
         
-        // dequeue contact
         [self dequeueContact:contact];
+        
+        // TODO: create success notification
+        [self _showSuccessNotification:@"A new contact was submitted."];
     }
 }
 

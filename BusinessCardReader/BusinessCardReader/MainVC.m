@@ -98,6 +98,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    if(toInterfaceOrientation == UIInterfaceOrientationPortrait) {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)shouldAutorotate
+{ 
+    return NO;
+}
+
+- (BOOL)supportedInterfaceOrientations
+{ 
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
 #pragma mark - MenuVCDelegate
 
 - (void)menuVC:(MenuVC *)vc didSelectMenu:(Menu)menu

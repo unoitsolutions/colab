@@ -87,11 +87,23 @@
 
 - (void)thankYouVCDidDismissWithScanMoreAction:(ThankYouVC *)thankYouVC
 {
+    // enqueue contact
+    [[QueueManager defaultManager] enqueueContact:[BCRAccountManager defaultManager].currentContact];
+    
+    [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/cardcapture/scanmore"]];
+    
     [self.imagePicker popToRootViewControllerAnimated:YES];
 }
 
 - (void)thankYouVCDidDismissWithFinishAction:(ThankYouVC *)thankYouVC
 {
+    
+    // enqueue contact
+    [[QueueManager defaultManager] enqueueContact:[BCRAccountManager defaultManager].currentContact];
+    
+    [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/cardcapture/finish"]];
+    
+    
     [UIApplication sharedApplication].statusBarHidden = NO;
     [self.imagePicker dismissViewControllerAnimated:YES completion:^{
         if ([self.delegate respondsToSelector:@selector(cardCaptureVC:didFinishCardCaptureWithInfo:)]) {

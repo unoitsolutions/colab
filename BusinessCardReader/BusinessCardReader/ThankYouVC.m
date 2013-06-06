@@ -54,11 +54,6 @@
 
 - (IBAction)scanMoreButtonTapped:(id)sender
 {
-    // enqueue contact
-    [[QueueManager defaultManager] enqueueContact:[BCRAccountManager defaultManager].currentContact];
-    
-    [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/cardcapture/scanmore"]];
-    
     if ([self.delegate respondsToSelector:@selector(thankYouVCDidDismissWithScanMoreAction:)]) {
         [self.delegate thankYouVCDidDismissWithScanMoreAction:self];
     }
@@ -66,11 +61,6 @@
 
 - (IBAction)finishButtonTapped:(id)sender
 {
-    // enqueue contact
-    [[QueueManager defaultManager] enqueueContact:[BCRAccountManager defaultManager].currentContact];
-    
-    [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/cardcapture/finish"]];
-    
     if ([self.delegate respondsToSelector:@selector(thankYouVCDidDismissWithFinishAction:)]) {
         [self.delegate thankYouVCDidDismissWithFinishAction:self];
     }

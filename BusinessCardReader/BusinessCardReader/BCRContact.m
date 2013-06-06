@@ -9,13 +9,15 @@
 #import "BCRContact.h"
 #import "XMLReader.h"
 #import "BCRAccountManager.h"
+#import <AddressBookUI/AddressBookUI.h>
 
 NSString* const BCRContactServiceOperationErrorDomain = @"BCRContactServiceOperationErrorDomain";
 
-static NSError *BCRContactOCRProcessingError;
-static NSError *BCRContactOCRProcessingInvalidImageError;
+//static NSError *BCRContactOCRProcessingError;
+//static NSError *BCRContactOCRProcessingInvalidImageError;
 static NSError *BCRContactContactUploadError;
-static NSError *BCRContactLRSUploadError;
+//static NSError *BCRContactLRSUploadError;
+static NSError *BCRContactCardImageUploadError;
 
 @implementation BCRContact
 
@@ -68,10 +70,11 @@ static NSError *BCRContactLRSUploadError;
 + (void)initialize
 {
     if (self == [BCRContact class]){
-        BCRContactOCRProcessingError = [[NSError alloc] initWithDomain:BCRContactServiceOperationErrorDomain code:BCRContactOCRProcessingErrorType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"OCR Process Failed",NSLocalizedDescriptionKey,nil]];
-        BCRContactOCRProcessingInvalidImageError = [[NSError alloc] initWithDomain:BCRContactServiceOperationErrorDomain code:BCRContactOCRProcessingInvalidImageErrorType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Business card not found on image",NSLocalizedDescriptionKey,nil]];
+//        BCRContactOCRProcessingError = [[NSError alloc] initWithDomain:BCRContactServiceOperationErrorDomain code:BCRContactOCRProcessingErrorType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"OCR Process Failed",NSLocalizedDescriptionKey,nil]];
+//        BCRContactOCRProcessingInvalidImageError = [[NSError alloc] initWithDomain:BCRContactServiceOperationErrorDomain code:BCRContactOCRProcessingInvalidImageErrorType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Business card not found on image",NSLocalizedDescriptionKey,nil]];
         BCRContactContactUploadError = [[NSError alloc] initWithDomain:BCRContactServiceOperationErrorDomain code:BCRContactContactUploadErrorType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Contact Upload Failed",NSLocalizedDescriptionKey,nil]];
-        BCRContactLRSUploadError = [[NSError alloc] initWithDomain:BCRContactServiceOperationErrorDomain code:BCRContactLRSUploadErrorType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Lead Routing System Upload Failed",NSLocalizedDescriptionKey,nil]];
+//        BCRContactLRSUploadError = [[NSError alloc] initWithDomain:BCRContactServiceOperationErrorDomain code:BCRContactLRSUploadErrorType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Lead Routing System Upload Failed",NSLocalizedDescriptionKey,nil]];
+        BCRContactCardImageUploadError = [[NSError alloc] initWithDomain:BCRContactServiceOperationErrorDomain code:BCRContactCardImageUploadErrorType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Business Card Upload Failed",NSLocalizedDescriptionKey,nil]];
     }
 }
 
@@ -191,20 +194,174 @@ static NSError *BCRContactLRSUploadError;
     
 }
 
+- (NSError *)saveToDevice
+{
+    // initiate address book
+    ABAddressBookRef addressBook;
+    addressBook = ABAddressBookCreate();
+    
+    CFErrorRef error = NULL;
+    BOOL success = NO;
+    
+    // create a record
+    ABRecordRef aRecord = ABPersonCreate();
+    
+    // set first name
+    if (self.firstName.length > 0) {
+        success = ABRecordSetValue(aRecord, kABPersonFirstNameProperty, (__bridge CFTypeRef)(self.firstName), &error);
+        if (!success) {
+            CFRelease(addressBook);
+            return (NSError *)CFBridgingRelease(error);
+        }
+    }
+    
+    
+    // set last name
+    if (self.lastName.length > 0) {
+        success = ABRecordSetValue(aRecord, kABPersonLastNameProperty, (__bridge CFTypeRef)(self.lastName), &error);
+        if (!success) {
+            CFRelease(addressBook);
+            return (NSError *)CFBridgingRelease(error);
+        }
+    } 
+    
+    // set email
+    ABMutableMultiValueRef multi = ABMultiValueCreateMutable(kABPersonEmailProperty);
+    ABMultiValueIdentifier multivalueIdentifier = NSIntegerMin;
+    if (self.email.length > 0) {
+        success = ABMultiValueAddValueAndLabel(multi, (__bridge CFTypeRef)(self.email), kABHomeLabel, &multivalueIdentifier);
+        if (!success) {
+            CFRelease(multi);
+            CFRelease(addressBook);
+            return (NSError *)CFBridgingRelease(error);
+        }
+    } 
+    success = ABRecordSetValue(aRecord, kABPersonEmailProperty, multi, &error);
+    if (!success) {
+        CFRelease(multi);
+        CFRelease(addressBook);
+        return (NSError *)CFBridgingRelease(error);
+    }
+    CFRelease(multi);
+    
+    // set phone numbers
+    multi = ABMultiValueCreateMutable(kABPersonPhoneProperty);
+    if (self.phone.length > 0) {
+        success = ABMultiValueAddValueAndLabel(multi, (__bridge CFTypeRef)(self.phone), kABHomeLabel, &multivalueIdentifier);
+        if (!success) {
+            CFRelease(multi);
+            CFRelease(addressBook);
+            return (NSError *)CFBridgingRelease(error);
+        }
+    }
+    if (self.fax.length > 0) {
+        success = ABMultiValueAddValueAndLabel(multi, (__bridge CFTypeRef)(self.fax), kABOtherLabel, &multivalueIdentifier);
+        if (!success) {
+            CFRelease(multi);
+            CFRelease(addressBook);
+            return (NSError *)CFBridgingRelease(error);
+        }
+    }
+    if (self.mobile.length > 0) {
+        success = ABMultiValueAddValueAndLabel(multi, (__bridge CFTypeRef)(self.mobile), kABPersonPhoneMobileLabel, &multivalueIdentifier);
+        if (!success) {
+            CFRelease(multi);
+            CFRelease(addressBook);
+            return (NSError *)CFBridgingRelease(error);
+        }
+    }
+    success = ABRecordSetValue(aRecord, kABPersonPhoneProperty, multi, &error);
+    if (!success) {
+        CFRelease(multi);
+        CFRelease(addressBook);
+        return (NSError *)CFBridgingRelease(error);
+    }
+    CFRelease(multi);
+    
+    // set address
+    ABMutableMultiValueRef address = ABMultiValueCreateMutable(kABDictionaryPropertyType);
+    CFStringRef keys[5];
+    CFStringRef values[5];
+    keys[0] = kABPersonAddressStreetKey;
+    keys[1] = kABPersonAddressCityKey; 
+    keys[2] = kABPersonAddressZIPKey;
+    keys[3] = kABPersonAddressCountryKey;
+    values[0] = (__bridge CFTypeRef)(self.address.length > 0 ? self.address : @"");
+    values[1] = (__bridge CFTypeRef)(self.city.length > 0 ? self.city : @"");
+    values[2] = (__bridge CFTypeRef)(self.zip.length > 0 ? self.zip : @"");
+    values[3] = (__bridge CFTypeRef)(self.country.length > 0 ? self.country : @"");
+    CFDictionaryRef aDict = CFDictionaryCreate(
+                                               kCFAllocatorDefault,
+                                               (void *)keys,
+                                               (void *)values,
+                                               5,
+                                               &kCFCopyStringDictionaryKeyCallBacks,
+                                               &kCFTypeDictionaryValueCallBacks
+                                               );
+    
+    ABMultiValueIdentifier identifier;
+    success = ABMultiValueAddValueAndLabel(address, aDict, kABHomeLabel, &identifier);
+    if (!success) {
+        CFRelease(aDict);
+        CFRelease(address);
+        CFRelease(addressBook);
+        return (NSError *)CFBridgingRelease(error);
+    }
+    CFRelease(aDict);
+    success = ABRecordSetValue(aRecord, kABPersonAddressProperty, address, &error);
+    if (!success) {
+        CFRelease(address);
+        CFRelease(addressBook);
+        return (NSError *)CFBridgingRelease(error);
+    }
+    CFRelease(address);
+    
+    // add record to address book
+    success = ABAddressBookAddRecord(addressBook, aRecord, &error);
+    if (!success) {
+        CFRelease(addressBook);
+        return (NSError *)CFBridgingRelease(error);
+    }
+    
+    // save changes to address book
+    success = ABAddressBookSave(addressBook, &error);
+    if (!success) {
+        CFRelease(addressBook);
+        return (NSError *)CFBridgingRelease(error);
+    }
+    
+    CFRelease(addressBook);
+    return nil;
+}
+
+
+
 #pragma mark - Service Operations
 
-- (void)doOCRProcessing
-{
-    DLOG(@"");
-    assert(!self.client);
-    
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        self.client = [[Client alloc] initWithApplicationID:OCR_APP_ID password:OCR_APP_PASSWORD];
-        [self.client setDelegate:self];
-        ProcessingParams* params = [[ProcessingParams alloc] init];
-        [self.client processBusinessCard:self.image withParams:params];
-    });
-}
+//- (void)doOCRProcessing
+//{
+//    DLOG(@"");
+//    assert(!self.client);
+//
+//    dispatch_sync(dispatch_get_main_queue(), ^{
+//        self.client = [[Client alloc] initWithApplicationID:OCR_APP_ID password:OCR_APP_PASSWORD];
+//        [self.client setDelegate:self];
+//        ProcessingParams* params = [[ProcessingParams alloc] init];
+//        [self.client processBusinessCard:self.image withParams:params];
+//    });
+//}
+//
+//- (void)doLRSUpload
+//{
+//#warning implement
+//    // TODO: implement
+//    assert(NO);
+//
+//    // update delegate
+//    if ([self.delegate respondsToSelector:@selector(contact:didFinishLRSUploadWithInfo:)]) {
+//        [self.delegate contact:self didFinishLRSUploadWithInfo:@{@"error":BCRContactLRSUploadError}];
+//    }
+//}
 
 - (void)doContactUpload
 {
@@ -243,67 +400,64 @@ static NSError *BCRContactLRSUploadError;
     DLOG(@"");
 }
 
-- (void)doLRSUpload
+
+- (void)doCardImageUpload
 {
-#warning implement
-    // TODO: implement
-    assert(NO);
-    
     // update delegate
-    if ([self.delegate respondsToSelector:@selector(contact:didFinishLRSUploadWithInfo:)]) {
-        [self.delegate contact:self didFinishLRSUploadWithInfo:@{@"error":BCRContactLRSUploadError}];
+    if ([self.delegate respondsToSelector:@selector(contact:didFinishContactUploadWithInfo:)]) {
+        [self.delegate contact:self didFinishContactUploadWithInfo:@{@"error":BCRContactContactUploadError}];
     }
 }
 
 #pragma mark - ClientDelegate implementation
 
-- (void)clientDidFinishUpload:(Client *)sender
-{
-}
-
-- (void)clientDidFinishProcessing:(Client *)sender
-{
-}
-
-- (void)client:(Client *)sender didFinishDownloadData:(NSData *)downloadedData
-{
-    DLOG(@"");
-    [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/cardcapture/ocrprocessed/success&contactId=%@",self.contactID]];
-    
-    // update contact
-    @try {
-        [self populatePropertiesWithData:downloadedData];
-    }
-    @catch (NSException *exception) {
-        DLOG(@"Error parsing data: %@.",exception);
-    }
-    @finally {
-        
-    }
-    
-    // cleanup
-    self.client.delegate = nil;
-    self.client = nil;
-    
-    // update delegate
-    if ([self.delegate respondsToSelector:@selector(contact:didFinishOCRProcessingWithInfo:)]) {
-        [self.delegate contact:self didFinishOCRProcessingWithInfo:@{}];
-    }
-}
-
-- (void)client:(Client *)sender didFailedWithError:(NSError *)error
-{
-    [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/cardcapture/ocrprocessed/fail&contactId=%@&error=%@",self.contactID,[error localizedDescription]]];
-    
-    // cleanup
-    self.client.delegate = nil;
-    self.client = nil;
-    
-    // update delegate
-    if ([self.delegate respondsToSelector:@selector(contact:didFinishOCRProcessingWithInfo:)]) {
-        [self.delegate contact:self didFinishOCRProcessingWithInfo:@{@"error":BCRContactOCRProcessingError}];
-    }
-}
+//- (void)clientDidFinishUpload:(Client *)sender
+//{
+//}
+//
+//- (void)clientDidFinishProcessing:(Client *)sender
+//{
+//}
+//
+//- (void)client:(Client *)sender didFinishDownloadData:(NSData *)downloadedData
+//{
+//    DLOG(@"");
+//    [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/cardcapture/ocrprocessed/success&contactId=%@",self.contactID]];
+//    
+//    // update contact
+//    @try {
+//        [self populatePropertiesWithData:downloadedData];
+//    }
+//    @catch (NSException *exception) {
+//        DLOG(@"Error parsing data: %@.",exception);
+//    }
+//    @finally {
+//        
+//    }
+//    
+//    // cleanup
+//    self.client.delegate = nil;
+//    self.client = nil;
+//    
+//    // update delegate
+//    if ([self.delegate respondsToSelector:@selector(contact:didFinishOCRProcessingWithInfo:)]) {
+//        [self.delegate contact:self didFinishOCRProcessingWithInfo:@{}];
+//    }
+//}
+//
+//- (void)client:(Client *)sender didFailedWithError:(NSError *)error
+//{
+//    [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/cardcapture/ocrprocessed/fail&contactId=%@&error=%@",self.contactID,[error localizedDescription]]];
+//    
+//    // cleanup
+//    self.client.delegate = nil;
+//    self.client = nil;
+//    
+//    // update delegate
+//    if ([self.delegate respondsToSelector:@selector(contact:didFinishOCRProcessingWithInfo:)]) {
+//        [self.delegate contact:self didFinishOCRProcessingWithInfo:@{@"error":BCRContactOCRProcessingError}];
+//    }
+//}
 
 #pragma mark - APIManagerDelegate Methods
 
@@ -325,20 +479,38 @@ static NSError *BCRContactLRSUploadError;
     }
 }
 
-- (void)APIManager:(APIManager *)manager didLRSUploadWithInfo:(NSDictionary *)info
+//- (void)APIManager:(APIManager *)manager didLRSUploadWithInfo:(NSDictionary *)info
+//{
+//    DLOG(@" %@",info);
+//    
+//    NSError *error = [info objectForKey:@"error"];
+//    if (error) {
+//        // update delegate
+//        if ([self.delegate respondsToSelector:@selector(contact:didFinishLRSUploadWithInfo:)]) {
+//            [self.delegate contact:self didFinishLRSUploadWithInfo:@{@"error":BCRContactContactUploadError}];
+//        }
+//    }else{
+//        // update delegate
+//        if ([self.delegate respondsToSelector:@selector(contact:didFinishLRSUploadWithInfo:)]) {
+//            [self.delegate contact:self didFinishLRSUploadWithInfo:@{}];
+//        }
+//    }
+//}
+
+- (void)APIManager:(APIManager *)manager didCardImageUpload:(NSDictionary *)info
 {
     DLOG(@" %@",info);
     
     NSError *error = [info objectForKey:@"error"];
     if (error) {
         // update delegate
-        if ([self.delegate respondsToSelector:@selector(contact:didFinishLRSUploadWithInfo:)]) {
-            [self.delegate contact:self didFinishLRSUploadWithInfo:@{@"error":BCRContactContactUploadError}];
+        if ([self.delegate respondsToSelector:@selector(contact:didFinishCardImageUpload:)]) {
+            [self.delegate contact:self didFinishCardImageUpload:@{@"error":BCRContactCardImageUploadError}];
         }
     }else{
         // update delegate
-        if ([self.delegate respondsToSelector:@selector(contact:didFinishLRSUploadWithInfo:)]) {
-            [self.delegate contact:self didFinishLRSUploadWithInfo:@{}];
+        if ([self.delegate respondsToSelector:@selector(contact:didFinishCardImageUpload:)]) {
+            [self.delegate contact:self didFinishCardImageUpload:info];
         }
     }
 }

@@ -11,26 +11,30 @@
 #import "APIManager.h"
 
 typedef enum {
-    BCRContactOCRProcessingErrorType,
-    BCRContactOCRProcessingInvalidImageErrorType,
+//    BCRContactOCRProcessingErrorType,
+//    BCRContactOCRProcessingInvalidImageErrorType,
     BCRContactContactUploadErrorType,
-    BCRContactLRSUploadErrorType,
+//    BCRContactLRSUploadErrorType,
+    BCRContactCardImageUploadErrorType,
 } BCRContactServiceOperationErrorType;
 
 typedef enum{
     BCRContactCreatedStatus,
-    BCRContactOCRProcessedStatus,
     BCRContactUploadedStatus,
-    BCRContactLRSSubmittedStatus
+    BCRContactProcessedStatus
+//    BCRContactOCRProcessedStatus,
+//    BCRContactUploadedStatus,
+//    BCRContactLRSSubmittedStatus
 } BCRContactStatus;
 
 @class BCRContact;
 @protocol BCRContactDelegate <NSObject>
 
 @optional
-- (void)contact:(BCRContact *)contact didFinishOCRProcessingWithInfo:(NSDictionary *)info;
 - (void)contact:(BCRContact *)contact didFinishContactUploadWithInfo:(NSDictionary *)info;
-- (void)contact:(BCRContact *)contact didFinishLRSUploadWithInfo:(NSDictionary *)info;
+- (void)contact:(BCRContact *)contact didFinishCardImageUpload:(NSDictionary *)info;
+//- (void)contact:(BCRContact *)contact didFinishOCRProcessingWithInfo:(NSDictionary *)info;
+//- (void)contact:(BCRContact *)contact didFinishLRSUploadWithInfo:(NSDictionary *)info;
 
 @end
 
@@ -53,9 +57,11 @@ typedef enum{
 
 - (void)updateImage:(UIImage *)image;
 - (void)populatePropertiesWithData:(NSData *)xmlData;
+- (NSError *)saveToDevice;
 
-- (void)doOCRProcessing;
 - (void)doContactUpload;
-- (void)doLRSUpload;
+- (void)doCardImageUpload;
+//- (void)doOCRProcessing;
+//- (void)doLRSUpload;
 
 @end

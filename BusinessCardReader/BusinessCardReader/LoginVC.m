@@ -69,6 +69,24 @@
     [super viewDidUnload];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    if(toInterfaceOrientation == UIInterfaceOrientationPortrait) {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)shouldAutorotate
+{ 
+    return NO;
+}
+
+- (BOOL)supportedInterfaceOrientations
+{ 
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 #pragma mark - Action Methods
 
 - (IBAction)keepMeLoggedInTapped:(UIButton *)sender

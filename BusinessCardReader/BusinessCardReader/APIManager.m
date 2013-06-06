@@ -427,4 +427,69 @@ static NSError *APIManagerAuthenticationError;
     [request startAsynchronous];
 }
 
+- (void)doCardImageUpload:(NSDictionary *)info
+{
+    [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/api/doCardImageUpload/"]];
+    
+    NSString *companyID = [info objectForKey:@"companyID"];
+    NSString *userID = [info objectForKey:@"userID"];
+    NSDictionary *contact = [info objectForKey:@"contact"];
+    NSString *authKey = [info objectForKey:@"authKey"];
+    NSData *image = [info objectForKey:@"image"];
+    
+    __block NSString *urlString = [NSString stringWithFormat:@"%@/cea/company/%@/user/%@/contact/%@/key/%@/contacts?op=readsave",BASE_URL,companyID, userID, contact,authKey];
+    
+    __block NSData *inputBodyData = image;
+    
+    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [request setRequestMethod:@"POST"];
+    [request appendPostData:inputBodyData];
+    
+    ASIBasicBlock completionBlock = ^{
+        NSDictionary *info = nil;
+        NSInteger statusCode = [request responseStatusCode];
+        if ((int)statusCode / 100 >= 4) {
+            DLOG(@"url: %@",urlString);
+            DLOG(@"status code: %d",statusCode);
+            DLOG(@"response: %@",[request responseString]);
+            
+            info = @{@"error":APIManagerServerError};
+        }
+        else{
+            NSError *parseError = nil;
+            NSObject *json = [NSJSONSerialization JSONObjectWithData:[request responseData] options:0 error:&parseError];
+            if (parseError) {
+                DLOG(@"url: %@",urlString);
+                DLOG(@"response: %@",[request responseString]);
+                
+                info = @{@"error":APIManagerInvalidResponseError};
+            }else{
+                DLOG(@"url: %@",urlString);
+                DLOG(@"response: %@",[request responseString]);
+                
+                info = @{@"result":json };
+            }
+        }
+        
+        if ([self.delegate respondsToSelector:@selector(APIManager:didCardImageUpload:)]) {
+            [self.delegate APIManager:self didCardImageUpload:info];
+        }
+    };
+    [request setCompletionBlock:completionBlock];
+    [request setFailedBlock:^{
+        DLOG(@"error: %@",[request error]);
+        NSError *error = [request error];
+        if ([error.domain isEqualToString:NetworkRequestErrorDomain] && error.code == ASIAuthenticationErrorType) {
+            if ([self.delegate respondsToSelector:@selector(APIManager:didCardImageUpload:)]) {
+                [self.delegate APIManager:self didCardImageUpload:@{@"error":APIManagerAuthenticationError}];
+            }
+        }else{
+            if ([self.delegate respondsToSelector:@selector(APIManager:didCardImageUpload:)]) {
+                [self.delegate APIManager:self didCardImageUpload:@{@"error":APIManagerRequestFailedError}];
+            }
+        }
+    }];
+    [request startAsynchronous];
+}
+
 @end
