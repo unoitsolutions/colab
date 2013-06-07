@@ -362,6 +362,13 @@ static NSError *APIManagerAuthenticationError;
     [request startAsynchronous];
 }
 
+- (void)doDeleteContacts:(NSDictionary *)info
+{
+    if ([self.delegate respondsToSelector:@selector(APIManager:didDeleteContactsWithInfo:)]) {
+        [self.delegate APIManager:self didDeleteContactsWithInfo:@{@"error":APIManagerRequestFailedError}];
+    }
+}
+
 - (void)doInitRetrievePassword:(NSDictionary *)info
 {
     [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/api/sendEmail/"]];

@@ -59,9 +59,8 @@ typedef enum{
 - (void)populatePropertiesWithData:(NSData *)xmlData;
 - (NSError *)saveToDevice;
 
+- (void)doDelete;
 - (void)doContactUpload;
 - (void)doCardImageUpload;
-//- (void)doOCRProcessing;
-//- (void)doLRSUpload;
 
 @end

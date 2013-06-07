@@ -363,6 +363,14 @@ static NSError *BCRContactCardImageUploadError;
 //    }
 //}
 
+- (void)doDelete
+{
+    APIManager *manager = [[APIManager alloc] init];
+    manager.delegate = self;
+    
+    [manager doDeleteContacts:@{@"contacts":@[]}];
+}
+
 - (void)doContactUpload
 {
     APIManager *manager = [[APIManager alloc] init];
@@ -476,6 +484,18 @@ static NSError *BCRContactCardImageUploadError;
         if ([self.delegate respondsToSelector:@selector(contact:didFinishContactUploadWithInfo:)]) {
             [self.delegate contact:self didFinishContactUploadWithInfo:info];
         }
+    }
+}
+
+- (void)APIManager:(APIManager *)manager didDeleteContactsWithInfo:(NSDictionary *)info
+{
+    DLOG(@" %@",info);
+    
+    NSError *error = [info objectForKey:@"error"];
+    if (error) {
+        DLOG(@"error: %@",error);
+    }else{
+        DLOG(@"success");
     }
 }
 
