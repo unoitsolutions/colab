@@ -151,11 +151,10 @@
 {
     if (section == 0) {
         return 4;
-    }
-    else if (section == 1) {
+    }else if (section == 1) {
         return 3;
     }else if (section == 2) {
-        return 1;
+        return 4;
     }else if (section == 3) {
         return 2;
     }else if (section == 4) {
@@ -183,8 +182,19 @@
     cell.textField.tag = (indexPath.section * 10) + indexPath.row;
     
     if (indexPath.section == 2) {
-        cell.textLabel.text = @"Address";
-        cell.textField.text = self.contact.address;
+        if (indexPath.row == 0 ) {
+            cell.textLabel.text = @"Address";
+            cell.textField.text = self.contact.address;
+        }else if (indexPath.row == 1 ) {
+            cell.textLabel.text = @"City";
+            cell.textField.text = self.contact.city;
+        }else if (indexPath.row == 2 ) {
+            cell.textLabel.text = @"Zip";
+            cell.textField.text = self.contact.zip;
+        }else if (indexPath.row == 3 ) {
+            cell.textLabel.text = @"Country";
+            cell.textField.text = self.contact.country;
+        }
     }else if (indexPath.section == 0) {
         if(indexPath.row == 0){
             cell.textLabel.text = @"First Name";
@@ -273,7 +283,15 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
     
     if (indexPath.section == 2) {
-        self.contactCopy.address = textField.text;
+        if(indexPath.row == 0){
+            self.contactCopy.address = textField.text;
+        }if(indexPath.row == 1){
+            self.contactCopy.city = textField.text;
+        }else if(indexPath.row == 2){
+            self.contactCopy.zip = textField.text;
+        }else if(indexPath.row == 3){
+            self.contactCopy.country = textField.text;
+        }
     }else if (indexPath.section == 0) {
         if(indexPath.row == 0){
             self.contactCopy.firstName = textField.text;

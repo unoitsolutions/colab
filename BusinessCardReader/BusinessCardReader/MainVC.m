@@ -121,6 +121,7 @@
 
 - (void)menuVC:(MenuVC *)vc didSelectMenu:(Menu)menu
 {
+    
     if (menu == MenuScan) {
         [self _showScanVC];
     }
@@ -153,7 +154,7 @@
 
 - (void)detailVC:(DetailVC *)vc menuBarButtonTapped:(id)sender
 {
-    CGRect destination = vc.view.frame;
+    CGRect destination = vc.navigationController.view.frame;
     if (destination.origin.x > 0){
         [vc slideLeft];
     }else{
@@ -194,15 +195,16 @@
 
 - (void)detailVC:(DetailVC *)vc createContactButtonTapped:(id)sender
 {
-    if(![BCRAccountManager defaultManager].currentEvent){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:@"Please select an event first."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles: nil];
-        [alert show];
-        return;
-    }
+#warning uncomment this
+//    if(![BCRAccountManager defaultManager].currentEvent){
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+//                                                        message:@"Please select an event first."
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles: nil];
+//        [alert show];
+//        return;
+//    }
     
     [self _showContactCreateVC];
 }

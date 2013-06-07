@@ -96,7 +96,7 @@
 #pragma mark - Action Methods
 
 - (void)menuBarButtonItemTapped:(id)sender
-{   
+{
     if ([self.delegate respondsToSelector:@selector(detailVC:menuBarButtonTapped:)]) {
         [self.delegate detailVC:self menuBarButtonTapped:sender];
     }
