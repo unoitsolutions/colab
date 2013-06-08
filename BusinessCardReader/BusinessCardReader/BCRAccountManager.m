@@ -213,7 +213,7 @@ static NSError *BCRAccountManagerSyncContactListError;
         NSString *userID = [userDict objectForKey:@"id"];
         
         NSDictionary *companyDict = [userDict objectForKey:@"company"];
-        NSString *companyID = [companyDict objectForKey:@"id"];
+        NSString *companyID = [companyDict objectForKey:@"companyId"];
         
         self.loggedInAccount = [[BCRAccount alloc] init];
         self.loggedInAccount.userID = userID;

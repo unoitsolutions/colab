@@ -184,59 +184,59 @@
     if (indexPath.section == 2) {
         if (indexPath.row == 0 ) {
             cell.textLabel.text = @"Address";
-            cell.textField.text = self.contact.address;
+            cell.textField.text = self.contactCopy.address;
         }else if (indexPath.row == 1 ) {
             cell.textLabel.text = @"City";
-            cell.textField.text = self.contact.city;
+            cell.textField.text = self.contactCopy.city;
         }else if (indexPath.row == 2 ) {
             cell.textLabel.text = @"Zip";
-            cell.textField.text = self.contact.zip;
+            cell.textField.text = self.contactCopy.zip;
         }else if (indexPath.row == 3 ) {
             cell.textLabel.text = @"Country";
-            cell.textField.text = self.contact.country;
+            cell.textField.text = self.contactCopy.country;
         }
     }else if (indexPath.section == 0) {
         if(indexPath.row == 0){
             cell.textLabel.text = @"First Name";
-            cell.textField.text = self.contact.firstName;
+            cell.textField.text = self.contactCopy.firstName;
         }else if(indexPath.row == 1){
             cell.textLabel.text = @"Last Name";
-            cell.textField.text = self.contact.lastName;
+            cell.textField.text = self.contactCopy.lastName;
         }else if(indexPath.row == 2){
             cell.textLabel.text = @"Company";
-            cell.textField.text = self.contact.company;
+            cell.textField.text = self.contactCopy.company;
         }else if(indexPath.row == 3){
             cell.textLabel.text = @"Job";
-            cell.textField.text = self.contact.job;
+            cell.textField.text = self.contactCopy.job;
         }
     }
     else if (indexPath.section == 1) {
         if(indexPath.row == 0){
             cell.textLabel.text = @"Phone";
-            cell.textField.text = self.contact.phone;
+            cell.textField.text = self.contactCopy.phone;
         }else if(indexPath.row == 1){
             cell.textLabel.text = @"Mobile";
-            cell.textField.text = self.contact.mobile;
+            cell.textField.text = self.contactCopy.mobile;
 
         }else if(indexPath.row == 2){
             cell.textLabel.text = @"Fax";
-            cell.textField.text = self.contact.fax;
+            cell.textField.text = self.contactCopy.fax;
         }
     }else if (indexPath.section == 3) {
         if(indexPath.row == 0){
             cell.textLabel.text = @"Email";
-            cell.textField.text = self.contact.email;
+            cell.textField.text = self.contactCopy.email;
         }else if(indexPath.row == 1){
             cell.textLabel.text = @"Web";
-            cell.textField.text = self.contact.web;
+            cell.textField.text = self.contactCopy.web;
         }
     }else if (indexPath.section == 4) {
         if(indexPath.row == 0){
             cell.textLabel.text = @"Topic(s)";
-            cell.textField.text = self.contact.topicList;
+            cell.textField.text = self.contactCopy.topicList;
         }else if(indexPath.row == 1){
             cell.textLabel.text = @"Action(s)";
-            cell.textField.text = self.contact.followupList;
+            cell.textField.text = self.contactCopy.followupList;
         }
     }
     
@@ -364,48 +364,55 @@
 {
     contact.delegate = nil;
     
-    BOOL result = [[DB defaultManager] updateContact:self.contactCopy];
-    if (!result) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"Unable to save changes. Please try again."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
-        return;
-    }
-    
-    self.contact.contactID = self.contactCopy.contactID;
-    self.contact.imageURL = self.contactCopy.imageURL;
-    self.contact.firstName = self.contactCopy.firstName;
-    self.contact.lastName = self.contactCopy.lastName;
-    self.contact.phone = self.contactCopy.phone;
-    self.contact.mobile = self.contactCopy.mobile;
-    self.contact.fax = self.contactCopy.fax;
-    self.contact.company = self.contactCopy.company;
-    self.contact.job = self.contactCopy.job;
-    self.contact.address = self.contactCopy.address;
-    self.contact.city = self.contactCopy.city;
-    self.contact.zip = self.contactCopy.zip;
-    self.contact.country = self.contactCopy.country;
-    self.contact.email = self.contactCopy.email;
-    self.contact.web = self.contactCopy.web;
-    self.contact.text = self.contactCopy.text;
-    self.contact.followupList = self.contactCopy.followupList;
-    self.contact.topicList = self.contactCopy.topicList;
-    self.contact.eventID = self.contactCopy.eventID;
-    assert(self.contact.eventID);
-    
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-    
     NSError *error = [info objectForKey:@"error"];  DLOG(@"error: %@",error);
     if (error) {
+        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to save changes. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }else{
+        BOOL result = [[DB defaultManager] updateContact:self.contactCopy];
+        if (!result) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Unable to save changes. Please try again."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil];
+            [alert show];
+            return;
+        }
+        
+        self.contact.contactID = self.contactCopy.contactID;
+        self.contact.imageURL = self.contactCopy.imageURL;
+        self.contact.firstName = self.contactCopy.firstName;
+        self.contact.lastName = self.contactCopy.lastName;
+        self.contact.phone = self.contactCopy.phone;
+        self.contact.mobile = self.contactCopy.mobile;
+        self.contact.fax = self.contactCopy.fax;
+        self.contact.company = self.contactCopy.company;
+        self.contact.job = self.contactCopy.job;
+        self.contact.address = self.contactCopy.address;
+        self.contact.city = self.contactCopy.city;
+        self.contact.zip = self.contactCopy.zip;
+        self.contact.country = self.contactCopy.country;
+        self.contact.email = self.contactCopy.email;
+        self.contact.web = self.contactCopy.web;
+        self.contact.text = self.contactCopy.text;
+        self.contact.followupList = self.contactCopy.followupList;
+        self.contact.topicList = self.contactCopy.topicList;
+        self.contact.eventID = self.contactCopy.eventID;
+        assert(self.contact.eventID);
+        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"The changes have been saved." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
+    
+    
+    
+    
 }
 
 #pragma mark - TopicPickerVCDelegate Methods

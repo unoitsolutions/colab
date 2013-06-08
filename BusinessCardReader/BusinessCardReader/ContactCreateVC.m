@@ -373,27 +373,45 @@
     
     contact.delegate = nil;
     
-    BOOL result = [[DB defaultManager] createContact:self.contact forEvent:[[BCRAccountManager defaultManager] currentEvent]];
-    if (!result) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"Unable to save changes. Please try again."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
-        return;
-    }
-    
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-    
     NSError *error = [info objectForKey:@"error"];  DLOG(@"error: %@",error);
     if (error) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to save changes. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+#warning remove debug code
+        BOOL result = [[DB defaultManager] createContact:self.contact forEvent:[[BCRAccountManager defaultManager] currentEvent]];
+        if (!result) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Unable to save changes. Please try again."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil];
+            [alert show];
+            return;
+        }
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"The changes have been saved." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
+        
+//        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+//        
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to save changes. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//        [alert show];
     }else{
+        BOOL result = [[DB defaultManager] createContact:self.contact forEvent:[[BCRAccountManager defaultManager] currentEvent]];
+        if (!result) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Unable to save changes. Please try again."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil];
+            [alert show];
+            return;
+        }
+        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"The changes have been saved." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
+    
 }
 
 #pragma mark - TopicPickerVCDelegate Methods
