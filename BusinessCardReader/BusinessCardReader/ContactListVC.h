@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailVC.h"
+#import "RMSwipeTableViewCell.h"
 
-@interface ContactListVC : DetailVC
+@interface ContactListVC : DetailVC 
 
 @property (strong, nonatomic) NSMutableArray *contactList, *contactListBackUp;
 @property (nonatomic) BOOL isReloading;

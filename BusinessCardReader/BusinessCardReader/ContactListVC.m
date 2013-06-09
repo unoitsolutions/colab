@@ -8,8 +8,13 @@
 
 #import "ContactListVC.h"
 #import "ContactDetailVC.h"
+#import "ContactListCell.h"
+#import <objc/runtime.h>
 
-@interface ContactListVC () <UITextFieldDelegate>
+#define DELETE_CONTACT_TITLE @"Delete Contact"
+#define CONTACT_KEY @"contact"
+
+@interface ContactListVC () <UITextFieldDelegate, UIAlertViewDelegate, ContactListCellDelegate>
 
 @end
 
@@ -49,6 +54,7 @@
     [super viewWillAppear:animated];
     
     [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/contact/list"]];
+    [self.searchTextField setText:@""];
     [self reloadData];
 }
 
@@ -117,25 +123,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    ContactListCell *cell = (ContactListCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[ContactListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
-        
-        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:12];
-        cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:10];
-        
-        UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
-        view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"contacts_row_bg"]];
-        cell.backgroundView = view;
     }
     
     BCRContact *contact = [self.contactList objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%@%@",(!contact.firstName.isNull ? [NSString stringWithFormat:@"%@ ",contact.firstName] : @""),contact.lastName];
-    cell.detailTextLabel.text = contact.company;
-    
+    [cell setUpCellContents:contact];
+    cell.swipeListener = self;
     return cell;
 }
 
@@ -206,5 +203,46 @@
         return searchTableData;
     }
 }
+
+#pragma mark - ContactListCell method
+
+- (void)didSwipeRight:(ContactListCell *)cell;
+{
+    // Save contact
+    
+    NSLog(@"DEBUG Contact:%@ %@", cell.contact.firstName, cell.contact.lastName);
+    NSError *error = [cell.contact saveToDevice];
+    NSLog(@"DEBUG Error:%@", error);
+}
+
+- (void)didSwipeLeft:(ContactListCell *)cell;
+{
+    // Delete contact
+    
+    UIAlertView *deleteAlertView = [[UIAlertView alloc]initWithTitle:DELETE_CONTACT_TITLE message:[NSString stringWithFormat:@"Are you sure you want to delete %@ %@ ?", cell.contact.firstName, cell.contact.lastName] delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [deleteAlertView show];
+    
+    objc_setAssociatedObject(deleteAlertView, CONTACT_KEY, cell, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+#pragma mark - UIAlertView delegate method
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    ContactListCell *cell = objc_getAssociatedObject(alertView, CONTACT_KEY);
+    
+    UITableView *table = (UITableView *)[cell superview];
+    NSIndexPath *indexPath = [table indexPathForCell:cell];
+    
+    if([alertView.title isEqualToString:DELETE_CONTACT_TITLE]) {
+        if(buttonIndex == 1) { // YES
+            /* insert code here for deleting contact */
+            [self.contactListBackUp removeObjectAtIndex:indexPath.row];
+            [self.contactList removeObjectAtIndex:indexPath.row];
+            [self.tableView reloadData];
+        }
+    }
+}
+
 
 @end

@@ -294,7 +294,7 @@ static NSError *BCRContactCardImageUploadError;
                                                kCFAllocatorDefault,
                                                (void *)keys,
                                                (void *)values,
-                                               5,
+                                               4,
                                                &kCFCopyStringDictionaryKeyCallBacks,
                                                &kCFTypeDictionaryValueCallBacks
                                                );
@@ -331,6 +331,7 @@ static NSError *BCRContactCardImageUploadError;
     }
     
     CFRelease(addressBook);
+    NSLog(@"saved");
     return nil;
 }
 
