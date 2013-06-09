@@ -19,7 +19,7 @@
     return NO;
 }
 
--(NSString*)stringByTrimmingLeadingWhitespace {
+- (NSString*)stringByTrimmingLeadingWhitespace {
     NSInteger i = 0;
     
     while ((i < [self length])
@@ -29,9 +29,15 @@
     return [self substringFromIndex:i];
 }
 
+- (BOOL)containsStringNoCase:(NSString *)searchString
+{
+    return ([self rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) ? YES : NO;
+}
+
 + (NSString *)stringWithData:(NSData *)data
 {
    return [[NSString alloc] initWithData:data encoding:NSNonLossyASCIIStringEncoding];
 }
+
 
 @end

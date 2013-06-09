@@ -12,6 +12,7 @@
 
 - (BOOL)isNull;
 - (NSString*)stringByTrimmingLeadingWhitespace;
+- (BOOL)containsStringNoCase:(NSString *)searchString;
 
 + (NSString *)stringWithData:(NSData *)data;
 

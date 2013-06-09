@@ -9,7 +9,7 @@
 #import "ContactListVC.h"
 #import "ContactDetailVC.h"
 
-@interface ContactListVC ()
+@interface ContactListVC () <UITextFieldDelegate>
 
 @end
 
@@ -20,6 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.contactList = [NSMutableArray array];
+        self.contactListBackUp = [NSMutableArray array];
     }
     return self;
 }
@@ -27,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldCharacterChange:) name:UITextFieldTextDidChangeNotification object:self.searchTextField];
     
     self.isReloading = NO;
 }
@@ -37,6 +40,7 @@
     [self setMenuButton:nil];
     [self setCameraButton:nil];
     [self setTableView:nil];
+    [self setSearchTextField:nil];
     [super viewDidUnload];
 }
 
@@ -45,7 +49,6 @@
     [super viewWillAppear:animated];
     
     [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/contact/list"]];
-    
     [self reloadData];
 }
 
@@ -67,9 +70,11 @@
     dispatch_async(queue, ^{
         NSMutableArray *list = [NSMutableArray arrayWithArray:[[DB defaultManager] retrieveAllNonProcessQueueItemContact]];
         self.contactList = [NSMutableArray array];
+        self.contactListBackUp = [NSMutableArray array];
         for (DBContact *dbcontact in list) {
             BCRContact *contact = [[BCRContact alloc] initWithDBContact:dbcontact];
             [self.contactList addObject:contact];
+            [self.contactListBackUp addObject:contact];
         }
         
         dispatch_sync(dispatch_get_main_queue(), ^{
@@ -152,6 +157,14 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark - Text field delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
+}
+
 #pragma mark - Convenience Methods
 
 - (void)_showLoadingView
@@ -164,6 +177,34 @@
 {
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
     [self.menuBarButton setEnabled:YES];
+}
+
+#pragma mark - Search 
+
+- (void)textFieldCharacterChange:(NSNotification *)notification
+{
+    if([notification.object isKindOfClass:[UITextField class]]){
+        self.contactList = self.contactListBackUp;
+        self.contactList = [self searchContactListWithString:[notification.object text]];
+        [self.tableView reloadData];
+    }
+}
+
+- (NSMutableArray *)searchContactListWithString:(NSString *)keyWord
+{
+    if([keyWord length] == 0){
+        return self.contactList;
+    }else{
+        
+        NSMutableArray *searchTableData = [[NSMutableArray alloc] init];
+        for (BCRContact *contact in self.contactList) {
+            NSString *contactName = [contact.firstName stringByAppendingFormat:@" %@", contact.lastName];
+            if([contactName containsStringNoCase:keyWord])
+                [searchTableData addObject:contact];
+            
+        }
+        return searchTableData;
+    }
 }
 
 @end
