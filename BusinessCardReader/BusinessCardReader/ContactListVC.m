@@ -11,6 +11,8 @@
 #import "ContactListCell.h"
 #import <objc/runtime.h>
 
+#define SAVE_CONTACT_TITLE @"Save Contact"
+#define SAVE_CONTACT_DESC @"Save contact to device ?"
 #define DELETE_CONTACT_TITLE @"Delete Contact"
 #define CONTACT_KEY @"contact"
 
@@ -206,23 +208,29 @@
 
 #pragma mark - ContactListCell method
 
+// Save contact
 - (void)didSwipeRight:(ContactListCell *)cell;
 {
-    // Save contact
-    
-    NSLog(@"DEBUG Contact:%@ %@", cell.contact.firstName, cell.contact.lastName);
-    NSError *error = [cell.contact saveToDevice];
-    NSLog(@"DEBUG Error:%@", error);
+    UIAlertView *save = [[UIAlertView alloc]
+                         initWithTitle:SAVE_CONTACT_TITLE
+                         message:SAVE_CONTACT_DESC
+                         delegate:self
+                         cancelButtonTitle:@"No"
+                         otherButtonTitles:@"Yes", nil];
+    [save show];
+    objc_setAssociatedObject(save, CONTACT_KEY, cell, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+// Delete contact
 - (void)didSwipeLeft:(ContactListCell *)cell;
 {
-    // Delete contact
-    
-    UIAlertView *deleteAlertView = [[UIAlertView alloc]initWithTitle:DELETE_CONTACT_TITLE message:[NSString stringWithFormat:@"Are you sure you want to delete %@ %@ ?", cell.contact.firstName, cell.contact.lastName] delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
-    [deleteAlertView show];
-    
-    objc_setAssociatedObject(deleteAlertView, CONTACT_KEY, cell, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    UIAlertView *delete = [[UIAlertView alloc]
+                           initWithTitle:DELETE_CONTACT_TITLE
+                           message:[NSString stringWithFormat:@"Are you sure you want to delete %@ %@ ?", cell.contact.firstName, cell.contact.lastName]
+                           delegate:self
+                           cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [delete show];
+    objc_setAssociatedObject(delete, CONTACT_KEY, cell, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 #pragma mark - UIAlertView delegate method
@@ -234,12 +242,18 @@
     UITableView *table = (UITableView *)[cell superview];
     NSIndexPath *indexPath = [table indexPathForCell:cell];
     
-    if([alertView.title isEqualToString:DELETE_CONTACT_TITLE]) {
-        if(buttonIndex == 1) { // YES
+    if(buttonIndex == 1) {
+        if([alertView.title isEqualToString:DELETE_CONTACT_TITLE]) {
             /* insert code here for deleting contact */
             [self.contactListBackUp removeObjectAtIndex:indexPath.row];
             [self.contactList removeObjectAtIndex:indexPath.row];
             [self.tableView reloadData];
+        }
+        else if([alertView.title isEqualToString:SAVE_CONTACT_TITLE]){
+            // SAVE
+            if(![cell.contact saveToDevice]){
+                NSLog(@"CONTACT SAVED");
+            }
         }
     }
 }
