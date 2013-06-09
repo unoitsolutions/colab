@@ -12,7 +12,7 @@
 #import <objc/runtime.h>
 
 #define SAVE_CONTACT_TITLE @"Save Contact"
-#define SAVE_CONTACT_DESC @"Save contact to device ?"
+#define SAVE_CONTACT_DESC @"Save contact to device?"
 #define DELETE_CONTACT_TITLE @"Delete Contact"
 #define CONTACT_KEY @"contact"
 
