@@ -22,3 +22,4 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+BusinessCardReader/.DS_Store
