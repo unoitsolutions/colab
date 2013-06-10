@@ -56,11 +56,17 @@
 }
 
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)viewWillDisappear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];
+    [super viewWillDisappear:animated];
     [self showStatusBar];
 }
+
+//- (void)viewDidDisappear:(BOOL)animated
+//{
+//    [super viewDidDisappear:animated];
+//    [self showStatusBar];
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -174,16 +180,16 @@
 
 - (void)hideStatusBar
 {
-    [UIView animateWithDuration:0.8 animations:^{
+//    [UIView animateWithDuration:0.8 animations:^{
         [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    }];
+//    }];
 }
 
 - (void)showStatusBar
 {
-    [UIView animateWithDuration:0.5 animations:^{
+//    [UIView animateWithDuration:0.5 animations:^{
         [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    }];
+//    }];
 }
 
 - (CGRect)computeCloseButtonFrame

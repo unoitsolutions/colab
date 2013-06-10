@@ -8,6 +8,7 @@
 
 #import "ContactDetailVC.h"
 #import "ContactEditVC.h"
+#import "AppDelegate.h"
 
 @interface ContactDetailVC ()
 
@@ -97,7 +98,8 @@
 - (IBAction)zoomButtonTapped:(id)sender
 {
     PhotoViewerVC *vc = [[PhotoViewerVC alloc] initWithImage:self.imageView.image];
-    [self presentViewController:vc animated:YES completion:^{
+    id rootVC = [[[[[UIApplication sharedApplication] keyWindow] subviews] objectAtIndex:0] nextResponder];
+    [(UIViewController *)rootVC presentViewController:vc animated:YES completion:^{
         
     }];
 }

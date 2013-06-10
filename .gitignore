@@ -23,3 +23,7 @@ profile
 DerivedData
 .idea/
 BusinessCardReader/.DS_Store
+
+*.xcuserstate
+
+*.xcuserstate
