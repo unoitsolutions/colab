@@ -140,6 +140,28 @@
     [self.navigationController pushViewController:self.topicPicker animated:YES];
 }
 
+- (IBAction)zoomButtonTapped:(id)sender
+{
+    PhotoViewerVC *vc = [[PhotoViewerVC alloc] initWithImage:self.imageView.image];
+    id rootVC = [[[[[UIApplication sharedApplication] keyWindow] subviews] objectAtIndex:0] nextResponder];
+    [(UIViewController *)rootVC presentViewController:vc animated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)cameraButtonTapped:(id)sender
+{
+    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"No camera found on this device."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

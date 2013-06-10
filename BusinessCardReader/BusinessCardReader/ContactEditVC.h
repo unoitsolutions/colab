@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TopicPickerVC.h"
 #import "ActionPickerVC.h"
+#import "PhotoViewerVC.h"
 
 @interface ContactEditVC : UIViewController <UITextFieldDelegate,  BCRContactDelegate, TopicPickerVCDelegate, ActionPickerVCDelegate>
 
@@ -26,5 +27,7 @@
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)doneButtonTapped:(id)sender;
+- (IBAction)zoomButtonTapped:(id)sender;
+- (IBAction)cameraButtonTapped:(id)sender;
 
 @end

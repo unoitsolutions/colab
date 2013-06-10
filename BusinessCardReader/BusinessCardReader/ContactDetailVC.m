@@ -8,7 +8,6 @@
 
 #import "ContactDetailVC.h"
 #import "ContactEditVC.h"
-#import "AppDelegate.h"
 
 @interface ContactDetailVC ()
 
@@ -106,6 +105,16 @@
 
 - (IBAction)cameraButtonTapped:(id)sender
 {
+    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"No camera found on this device."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
+    
 }
 
 #pragma mark - Table view data source
