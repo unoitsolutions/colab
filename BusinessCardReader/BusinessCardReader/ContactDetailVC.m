@@ -90,6 +90,7 @@
 - (IBAction)editButtonTapped:(id)sender
 {   
     ContactEditVC *vc = [[ContactEditVC alloc] initWithNibName:nil bundle:nil];
+    vc.delegate = self.delegate;
     vc.contact = self.contact;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -105,16 +106,9 @@
 
 - (IBAction)cameraButtonTapped:(id)sender
 {
-    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:@"No camera found on this device."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles: nil];
-        [alert show];
-        return;
+    if ([self.delegate respondsToSelector:@selector(detailVC:cameraButtonTapped:)]) {
+        [self.delegate detailVC:self cameraButtonTapped:sender];
     }
-    
 }
 
 #pragma mark - Table view data source

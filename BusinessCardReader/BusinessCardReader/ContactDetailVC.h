@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailVC.h"
 #import "PhotoViewerVC.h"
 
-@interface ContactDetailVC : UIViewController
+@interface ContactDetailVC : DetailVC
 
 @property (strong, nonatomic) BCRContact *contact;
 

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailVC.h"
 #import "TopicPickerVC.h"
 #import "ActionPickerVC.h"
 #import "PhotoViewerVC.h"
 
-@interface ContactEditVC : UIViewController <UITextFieldDelegate,  BCRContactDelegate, TopicPickerVCDelegate, ActionPickerVCDelegate>
+@interface ContactEditVC : DetailVC <UITextFieldDelegate,  BCRContactDelegate, TopicPickerVCDelegate, ActionPickerVCDelegate>
 
 @property (strong, nonatomic) BCRContact *contact;
 @property (copy, nonatomic) BCRContact *contactCopy;

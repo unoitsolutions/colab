@@ -152,6 +152,7 @@
     BCRContact *contact = [self.contactList objectAtIndex:indexPath.row];
 
     ContactDetailVC *vc = [[ContactDetailVC alloc] initWithNibName:nil bundle:nil];
+    vc.delegate = self.delegate;
     vc.contact = contact;
     [self.navigationController pushViewController:vc animated:YES];
 }
