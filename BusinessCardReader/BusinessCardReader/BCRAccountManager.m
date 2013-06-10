@@ -51,6 +51,11 @@ static NSError *BCRAccountManagerSyncContactListError;
         self.loggedInAccount.authKey = authKey;
         
         DBAccount *savedAccount = [[DB defaultManager] retrieveAccountWithUserID:userID];
+        if (!savedAccount){
+            [self clearLoggedInAccount];
+            self.loggedInAccount = nil;
+            return;
+        }
         self.loggedInAccount.companyID = savedAccount.companyID;
         
 #ifdef DLOG
@@ -139,6 +144,8 @@ static NSError *BCRAccountManagerSyncContactListError;
 {
     DLOG(@"");
     
+    DLOG(@"| %@ | %@ | %@ |",self.loggedInAccount.userID, self.loggedInAccount.authKey, self.loggedInAccount.companyID);
+    
     if (!self.loggedInAccount.userID || !self.loggedInAccount.authKey || !self.loggedInAccount.companyID) {
         // update delegate
         if ([self.delegate respondsToSelector:@selector(manager:didSyncContactListWithInfo:)]) {
@@ -220,8 +227,14 @@ static NSError *BCRAccountManagerSyncContactListError;
         self.loggedInAccount.authKey = authKey;
         self.loggedInAccount.companyID = companyID;
         
+        DLOG(@"| %@ | %@ | %@ |",self.loggedInAccount.userID, self.loggedInAccount.authKey, self.loggedInAccount.companyID);
+        
         // update db
         [[DB defaultManager] createOrUpdateAccount:self.loggedInAccount];
+        
+        // debug
+        DBAccount *savedAccount = [[DB defaultManager] retrieveAccountWithUserID:userID];
+        assert(savedAccount);
         
         // save authKey if necessary
         if (self.isPersistentLogin) {

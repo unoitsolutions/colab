@@ -78,6 +78,7 @@
         account.companyID = [result stringForColumn:@"companyID"];
         break;
     }
+    if (account.userID.length <= 0 && account.companyID.length <=0) return nil;
     return account;
 }
 
@@ -296,7 +297,7 @@
                   followupList = :followupList,\
                   topicList = :topicList,\
                   status = :status,\
-                  eventID = :eventID,\
+                  eventID = :eventID\
                   WHERE contactID = :contactID" withParameterDictionary:argsDict];
         FMDBQuickCheck(result);
         
@@ -409,7 +410,7 @@
 {
     [self.db beginTransaction];
     
-#define FORCE_DROP_ALL_TABLES YES
+//#define FORCE_DROP_ALL_TABLES YES
     
     // Account
 #ifdef FORCE_DROP_ALL_TABLES
