@@ -104,6 +104,7 @@
         self.photoScrollView = [[UIScrollView alloc] init];
     if(!imageView)
         imageView = [[UIImageView alloc] initWithImage:self.photo];
+    imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
                                 
     //self.photoScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     self.photoScrollView.frame = CGRectMake(0, 0, [[UIScreen mainScreen] applicationFrame].size.width, SCREEN_HEIGHT);
@@ -170,6 +171,7 @@
     if([sender isKindOfClass:[UIScrollView class]]) {
         UIScrollView *photoScrollView = (UIScrollView *)sender;
         
+        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         imageView.frame = [self centeredFrameForScrollView:photoScrollView andUIView:imageView];
         
         CGRect fixedFrame = [self computeCloseButtonFrame];
