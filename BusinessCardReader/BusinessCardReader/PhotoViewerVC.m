@@ -92,6 +92,7 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
+     [self updateUIElements:self.photoScrollView];
     return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
