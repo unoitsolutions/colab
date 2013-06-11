@@ -264,8 +264,16 @@
         }
         else if([alertView.title isEqualToString:SAVE_CONTACT_TITLE]){
             // SAVE
-            if(![cell.contact saveToDevice]){
-                NSLog(@"CONTACT SAVED");
+            NSError *error = [cell.contact saveToDevice];
+            if(!error){
+                [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/contact/list/saveToDevice"]];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Contact is saved to device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
+            }else{
+                [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/contact/list/saveToDevice?error=%@",[error description]]];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to save contact to device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
+                
             }
         }
     }
