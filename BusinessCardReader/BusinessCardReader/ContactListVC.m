@@ -288,8 +288,7 @@
 
 - (void)ContactEditSuccessfulNotificationHandler:(NSNotification *)note
 {
-    // TODO: reload data
-    DLOG(@"RELOAD!!!!!!!!!!!!!!!!!!!!!!");
+    // no need to do anything.. this view is always reloading when @selector(viewWillAppear:) is called
 }
 
 @end

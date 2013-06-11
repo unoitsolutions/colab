@@ -57,6 +57,7 @@
     [self setJobLabel:nil];
     [self setNavigationBar:nil];
     [self setBackButton:nil];
+    [self setTableView:nil];
     [super viewDidUnload];
 }
 
@@ -87,7 +88,14 @@
 #pragma mark - Operations
 
 - (void)reloadData
-{}
+{
+    if(self.contact.image) self.imageView.image = self.contact.image;
+    self.nameLabel.text = [NSString stringWithFormat:@"%@%@",(!self.contact.firstName.isNull ? [NSString stringWithFormat:@"%@ ",self.contact.firstName] : @""),self.contact.lastName];
+    self.companyLabel.text = self.contact.company;
+    self.jobLabel.text = self.contact.job;
+ 
+    [self.tableView reloadData];
+}
 
 #pragma mark - Action Methods
 
@@ -232,8 +240,7 @@
 
 - (void)ContactEditSuccessfulNotificationHandler:(NSNotification *)note
 {
-    // TODO: reload data
-    DLOG(@"RELOAD!!!!!!!!!!!!!!!!!!!!!!");
+    [self reloadData];
 }
 
 @end
