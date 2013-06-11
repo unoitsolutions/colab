@@ -1861,7 +1861,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Raymund Vidar (ZP2UDD2WER)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1877,7 +1877,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "FCB91F5D-22F0-43AA-A2B4-F67730CF839D";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1894,7 +1894,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Raymund Vidar (ZP2UDD2WER)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1903,7 +1903,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "6C5E822F-9258-419D-895E-AFBF0B2593CC";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1912,8 +1912,8 @@
 		9E9876D616F80119002F1581 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Raymund Vidar (ZP2UDD2WER)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jason  Kobilka (7T66ZP65PR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason  Kobilka (7T66ZP65PR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BusinessCardReader/BusinessCardReader-Prefix.pch";
 				INFOPLIST_FILE = "BusinessCardReader/BusinessCardReader-Info.plist";
@@ -1923,7 +1923,8 @@
 					"\"$(SRCROOT)/BusinessCardReader/TestFlightSDK1.2.4\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6C5E822F-9258-419D-895E-AFBF0B2593CC";
+				PROVISIONING_PROFILE = "13ED1529-391C-43B3-8A53-F2CA2FDE8481";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0C561DA1-3591-40B0-9CBF-934EC0ED9535";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1932,8 +1933,8 @@
 		9E9876D716F80119002F1581 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Raymund Vidar (ZP2UDD2WER)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jason  Kobilka (7T66ZP65PR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason  Kobilka (7T66ZP65PR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BusinessCardReader/BusinessCardReader-Prefix.pch";
 				INFOPLIST_FILE = "BusinessCardReader/BusinessCardReader-Info.plist";
@@ -1943,7 +1944,8 @@
 					"\"$(SRCROOT)/BusinessCardReader/TestFlightSDK1.2.4\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6C5E822F-9258-419D-895E-AFBF0B2593CC";
+				PROVISIONING_PROFILE = "13ED1529-391C-43B3-8A53-F2CA2FDE8481";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0C561DA1-3591-40B0-9CBF-934EC0ED9535";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
