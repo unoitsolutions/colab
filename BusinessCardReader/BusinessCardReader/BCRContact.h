@@ -22,9 +22,6 @@ typedef enum{
     BCRContactCreatedStatus,
     BCRContactUploadedStatus,
     BCRContactProcessedStatus
-//    BCRContactOCRProcessedStatus,
-//    BCRContactUploadedStatus,
-//    BCRContactLRSSubmittedStatus
 } BCRContactStatus;
 
 @class BCRContact;

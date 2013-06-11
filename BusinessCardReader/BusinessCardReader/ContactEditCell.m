@@ -14,7 +14,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:11];
+        self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:11];
         //        self.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:11];
         
         self.textField = [[UITextField alloc] initWithFrame:CGRectZero];
@@ -31,9 +31,9 @@
     [super layoutSubviews]; // layouts the cell as UITableViewCellStyleValue2 would normally look like
     
     // change frame of one or more labels
-    self.textLabel.frame = CGRectMake(5, 0, 55, self.contentView.frame.size.height);
+    self.textLabel.frame = CGRectMake(5, 0, 60, self.contentView.frame.size.height);
     //    self.detailTextLabel.frame = CGRectMake(55, 0, 232, self.contentView.frame.size.height);
-    self.textField.frame = CGRectMake(65, 0, 222, self.contentView.frame.size.height); //CGRectMake(55, 8, 232, 21);
+    self.textField.frame = CGRectMake(70, 0, 217, self.contentView.frame.size.height); //CGRectMake(55, 8, 232, 21);
 }
 
 @end

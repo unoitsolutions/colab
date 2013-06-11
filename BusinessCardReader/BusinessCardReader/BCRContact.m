@@ -412,10 +412,28 @@ static NSError *BCRContactCardImageUploadError;
 
 - (void)doCardImageUpload
 {
-    // update delegate
-    if ([self.delegate respondsToSelector:@selector(contact:didFinishContactUploadWithInfo:)]) {
-        [self.delegate contact:self didFinishContactUploadWithInfo:@{@"error":BCRContactContactUploadError}];
-    }
+    APIManager *manager = [[APIManager alloc] init];
+    manager.delegate = self;
+    
+//    NSString *companyID = [info objectForKey:@"companyID"];
+//    NSString *userID = [info objectForKey:@"userID"];
+//    NSDictionary *contact = [info objectForKey:@"contact"];
+//    NSString *authKey = [info objectForKey:@"authKey"];
+//    NSData *image = [info objectForKey:@"image"];
+    
+    NSString *contact = @"{\"user\":{},\"event\":{\"id\":1,\"appData\":{\"id\":1}},\"contacts\":[{\"id\":\"-1\",\"eventId\":1,\"fields\":[{\"fieldName\":\"FollowUpAction\",\"value\":\"CallUrgent\"},{\"fieldName\":\"Topics\",\"value\":\"None\"}]}]}";
+    [manager doCardImageUpload:@{
+     @"userID":[[BCRAccountManager defaultManager] loggedInAccount].userID,
+     @"companyID":[[BCRAccountManager defaultManager] loggedInAccount].companyID,
+     @"authKey":[[BCRAccountManager defaultManager] loggedInAccount].authKey,
+     @"contact":contact,//[contact stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],
+     @"image":UIImageJPEGRepresentation(self.image, 0.0)
+     }];
+    
+//    // update delegate
+//    if ([self.delegate respondsToSelector:@selector(contact:didFinishContactUploadWithInfo:)]) {
+//        [self.delegate contact:self didFinishContactUploadWithInfo:@{@"error":BCRContactContactUploadError}];
+//    }
 }
 
 #pragma mark - ClientDelegate implementation

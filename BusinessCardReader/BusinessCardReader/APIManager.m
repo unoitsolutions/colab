@@ -451,7 +451,7 @@ static NSError *APIManagerAuthenticationError;
     NSString *authKey = [info objectForKey:@"authKey"];
     NSData *image = [info objectForKey:@"image"];
     
-    __block NSString *urlString = [NSString stringWithFormat:@"%@/cea/company/%@/user/%@/contact/%@/key/%@/contacts?op=readsave",BASE_URL,companyID, userID, contact,authKey];
+    __block NSString *urlString = [[NSString stringWithFormat:@"%@/cea/company/%@/user/%@/contact/%@/key/%@/contacts?op=readsave",BASE_URL,companyID, userID,contact,authKey] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     __block NSData *inputBodyData = image;
     
@@ -492,6 +492,8 @@ static NSError *APIManagerAuthenticationError;
     [request setCompletionBlock:completionBlock];
     [request setFailedBlock:^{
         DLOG(@"error: %@",[request error]);
+        DLOG(@"urlstring: %@",urlString);
+        DLOG(@"url: %@",[request url].absoluteString);
         NSError *error = [request error];
         if ([error.domain isEqualToString:NetworkRequestErrorDomain] && error.code == ASIAuthenticationErrorType) {
             if ([self.delegate respondsToSelector:@selector(APIManager:didCardImageUpload:)]) {

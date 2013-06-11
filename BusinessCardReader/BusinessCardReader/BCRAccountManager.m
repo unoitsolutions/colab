@@ -91,7 +91,7 @@ static NSError *BCRAccountManagerSyncContactListError;
     NSString *rawUsername = [info objectForKey:@"username"];
     NSString *rawPassword = [info objectForKey:@"password"];
     if ([rawUsername isEqualToString:@"demo"] && [rawPassword isEqualToString:@"demo"]) {
-        rawUsername = @"adeeb";
+        rawUsername = @"adeeb@ironhorseinteractive.com";
         rawPassword = @"adeeb";
     }
     
