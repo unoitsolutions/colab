@@ -13,6 +13,7 @@
 - (BOOL)isNull;
 - (NSString*)stringByTrimmingLeadingWhitespace;
 - (BOOL)containsStringNoCase:(NSString *)searchString;
+- (NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding;
 
 + (NSString *)stringWithData:(NSData *)data;
 

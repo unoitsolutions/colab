@@ -34,6 +34,14 @@
     return ([self rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) ? YES : NO;
 }
 
+- (NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding {
+	return (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
+                                                                        (CFStringRef)self,
+                                                                        NULL,
+                                                                        (CFStringRef)@"!*'\"();:@&=+$,/?%#[]% ",
+                                                                        CFStringConvertNSStringEncodingToEncoding(encoding));
+}
+
 + (NSString *)stringWithData:(NSData *)data
 {
    return [[NSString alloc] initWithData:data encoding:NSNonLossyASCIIStringEncoding];

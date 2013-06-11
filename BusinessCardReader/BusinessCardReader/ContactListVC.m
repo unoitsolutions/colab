@@ -81,6 +81,11 @@
         self.contactListBackUp = [NSMutableArray array];
         for (DBContact *dbcontact in list) {
             BCRContact *contact = [[BCRContact alloc] initWithDBContact:dbcontact];
+            
+            if (contact.status == BCRContactDeletedStatus) {
+                continue;
+            }
+            
             [self.contactList addObject:contact];
             [self.contactListBackUp addObject:contact];
         }
@@ -246,9 +251,16 @@
     if(buttonIndex == 1) {
         if([alertView.title isEqualToString:DELETE_CONTACT_TITLE]) {
             /* insert code here for deleting contact */
-            [self.contactListBackUp removeObjectAtIndex:indexPath.row];
-            [self.contactList removeObjectAtIndex:indexPath.row];
-            [self.tableView reloadData];
+//            [self.contactListBackUp removeObjectAtIndex:indexPath.row];
+//            [self.contactList removeObjectAtIndex:indexPath.row];
+//            [self.tableView reloadData];
+            
+            // update status
+            BCRContact *contact = [self.contactList objectAtIndex:indexPath.row];
+            [contact setStatus:BCRContactDeletedStatus];
+            [[DB defaultManager] updateContact:contact];
+            [self reloadData];
+
         }
         else if([alertView.title isEqualToString:SAVE_CONTACT_TITLE]){
             // SAVE

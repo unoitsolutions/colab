@@ -451,7 +451,7 @@ static NSError *APIManagerAuthenticationError;
     NSString *authKey = [info objectForKey:@"authKey"];
     NSData *image = [info objectForKey:@"image"];
     
-    __block NSString *urlString = [[NSString stringWithFormat:@"%@/cea/company/%@/user/%@/contact/%@/key/%@/contacts?op=readsave",BASE_URL,companyID, userID,contact,authKey] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    __block NSString *urlString = [NSString stringWithFormat:@"%@/cea/company/%@/user/%@/contact/%@/key/%@/contacts?op=readsave",BASE_URL,companyID, userID,contact,authKey] ;
     
     __block NSData *inputBodyData = image;
     

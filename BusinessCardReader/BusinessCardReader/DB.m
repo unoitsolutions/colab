@@ -298,7 +298,7 @@
                   topicList = :topicList,\
                   status = :status,\
                   eventID = :eventID\
-                  WHERE contactID = :contactID" withParameterDictionary:argsDict];
+                  WHERE contactID = :contactID AND status != 3" withParameterDictionary:argsDict];
         FMDBQuickCheck(result);
         
     }else{

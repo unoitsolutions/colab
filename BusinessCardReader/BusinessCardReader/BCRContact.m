@@ -364,14 +364,6 @@ static NSError *BCRContactCardImageUploadError;
 //    }
 //}
 
-- (void)doDelete
-{
-    APIManager *manager = [[APIManager alloc] init];
-    manager.delegate = self;
-    
-    [manager doDeleteContacts:@{@"contacts":@[]}];
-}
-
 - (void)doContactUpload
 {
     APIManager *manager = [[APIManager alloc] init];
@@ -409,7 +401,6 @@ static NSError *BCRContactCardImageUploadError;
     DLOG(@"");
 }
 
-
 - (void)doCardImageUpload
 {
     APIManager *manager = [[APIManager alloc] init];
@@ -421,12 +412,25 @@ static NSError *BCRContactCardImageUploadError;
 //    NSString *authKey = [info objectForKey:@"authKey"];
 //    NSData *image = [info objectForKey:@"image"];
     
-    NSString *contact = @"{\"user\":{},\"event\":{\"id\":1,\"appData\":{\"id\":1}},\"contacts\":[{\"id\":\"-1\",\"eventId\":1,\"fields\":[{\"fieldName\":\"FollowUpAction\",\"value\":\"CallUrgent\"},{\"fieldName\":\"Topics\",\"value\":\"None\"}]}]}";
+    NSString *contactRaw = @"{\"user\":{},\"event\":{\"id\":1,\"appData\":{\"id\":1}},\"contacts\":[{\"id\":\"-1\",\"eventId\":1,\"fields\":[{\"fieldName\":\"FollowUpAction\",\"value\":\"CallUrgent\"},{\"fieldName\":\"Topics\",\"value\":\"None\"}]}]}";
+    CFStringRef safeString = CFURLCreateStringByAddingPercentEscapes (
+                                                                      NULL,
+                                                                      (CFStringRef)contactRaw,
+                                                                      NULL,
+                                                                      (CFStringRef)@"!*'\"(){};:@&=+$,/?%#[]% ",
+                                                                      kCFStringEncodingUTF8
+                                                                      );
+    NSString *contact = (__bridge NSString *)safeString;
+   
+//    NSString *contact = [contactRaw urlEncodeUsingEncoding:NSUTF8StringEncoding];
+    
+//    NSString *contact = [contactRaw stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
     [manager doCardImageUpload:@{
      @"userID":[[BCRAccountManager defaultManager] loggedInAccount].userID,
      @"companyID":[[BCRAccountManager defaultManager] loggedInAccount].companyID,
      @"authKey":[[BCRAccountManager defaultManager] loggedInAccount].authKey,
-     @"contact":contact,//[contact stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],
+     @"contact":contact,
      @"image":UIImageJPEGRepresentation(self.image, 0.0)
      }];
     
