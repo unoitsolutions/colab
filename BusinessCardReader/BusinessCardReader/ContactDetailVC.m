@@ -25,7 +25,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -33,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ContactEditSuccessfulNotificationHandler:) name:ContactEditSuccessfulNotificationName object:nil];
     
     self.view.backgroundColor = [[BCRAccountManager defaultManager] defaultBGColor];
     self.navigationBar.backgroundColor = [[BCRAccountManager defaultManager] defaultNavbarBGColor];
@@ -47,6 +49,8 @@
 
 - (void)viewDidUnload
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:ContactEditSuccessfulNotificationName object:nil];
+    
     [self setImageView:nil];
     [self setNameLabel:nil];
     [self setCompanyLabel:nil];
@@ -79,6 +83,11 @@
 {
     return UIInterfaceOrientationMaskPortrait;
 }
+
+#pragma mark - Operations
+
+- (void)reloadData
+{}
 
 #pragma mark - Action Methods
 
@@ -217,6 +226,14 @@
     }else{
         return 37;
     }
+}
+
+#pragma mark - ContactEditSuccessfulNotificationHandler methods
+
+- (void)ContactEditSuccessfulNotificationHandler:(NSNotification *)note
+{
+    // TODO: reload data
+    DLOG(@"RELOAD!!!!!!!!!!!!!!!!!!!!!!");
 }
 
 @end

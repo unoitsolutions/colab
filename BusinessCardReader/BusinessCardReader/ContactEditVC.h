@@ -12,6 +12,8 @@
 #import "ActionPickerVC.h"
 #import "PhotoViewerVC.h"
 
+extern NSString *ContactEditSuccessfulNotificationName;
+
 @interface ContactEditVC : DetailVC <UITextFieldDelegate,  BCRContactDelegate, TopicPickerVCDelegate, ActionPickerVCDelegate>
 
 @property (strong, nonatomic) BCRContact *contact;

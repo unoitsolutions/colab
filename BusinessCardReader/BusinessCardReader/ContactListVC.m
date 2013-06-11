@@ -7,6 +7,7 @@
 //
 
 #import "ContactListVC.h"
+#import "ContactEditVC.h"
 #import "ContactDetailVC.h"
 #import "ContactListCell.h"
 #import <objc/runtime.h>
@@ -37,12 +38,16 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldCharacterChange:) name:UITextFieldTextDidChangeNotification object:self.searchTextField];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ContactEditSuccessfulNotificationHandler:) name:ContactEditSuccessfulNotificationName object:nil];
     
     self.isReloading = NO;
 }
 
 - (void)viewDidUnload
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:self.searchTextField];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:ContactEditSuccessfulNotificationName object:nil];
+    
     [self setNavigationBar:nil];
     [self setMenuButton:nil];
     [self setCameraButton:nil];
@@ -279,5 +284,12 @@
     }
 }
 
+#pragma mark - ContactEditSuccessfulNotificationHandler methods
+
+- (void)ContactEditSuccessfulNotificationHandler:(NSNotification *)note
+{
+    // TODO: reload data
+    DLOG(@"RELOAD!!!!!!!!!!!!!!!!!!!!!!");
+}
 
 @end

@@ -26,4 +26,6 @@
 - (IBAction)zoomButtonTapped:(id)sender;
 - (IBAction)cameraButtonTapped:(id)sender;
 
+- (void)reloadData;
+
 @end

@@ -9,6 +9,8 @@
 #import "ContactEditVC.h"
 #import "ContactEditCell.h"
 
+NSString *ContactEditSuccessfulNotificationName = @"ContactEditSuccessfulNotificationName";
+
 @interface ContactEditVC ()
 
 @end
@@ -132,9 +134,25 @@
         return;
     }
     
+    
+    NSMutableArray *topicList = [NSMutableArray array];
+    [topicList addObjectsFromArray:[[BCRAccountManager defaultManager] eventWithEventID:self.contactCopy.eventID].topicOptionList];
+    for (NSString *topic in self.contactCopy.topicOptionList) {
+        BOOL found = NO;
+        for (NSString *_topic in topicList) {
+            if ([topic isEqualToString:_topic]) {
+                found = YES;
+                break;
+            }
+        }
+        if (!found) {
+            [topicList addObject:topic];
+        }
+    }
+    
     // go to topicsVC
     self.topicPicker = [[TopicPickerVC alloc] initWithNibName:nil bundle:nil];
-    self.topicPicker.topicList = [[BCRAccountManager defaultManager] eventWithEventID:self.contactCopy.eventID].topicOptionList;
+    self.topicPicker.topicList = topicList;
     self.topicPicker.contact = self.contactCopy;
     self.topicPicker.delegate = self;
     [self.navigationController pushViewController:self.topicPicker animated:YES];
@@ -422,6 +440,8 @@
         
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         
+        [[NSNotificationCenter defaultCenter] postNotificationName:ContactEditSuccessfulNotificationName object:self];
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"The changes have been saved." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
@@ -435,9 +455,27 @@
 
 - (void)topicPicker:(TopicPickerVC *)picker didFinishPickingTopicsWithInfo:(NSDictionary *)info
 {
+    NSMutableArray *actionList = [NSMutableArray array];
+    [actionList addObjectsFromArray:[[BCRAccountManager defaultManager] eventWithEventID:self.contactCopy.eventID].followupOptionList];
+    DLOG(@"a: %@",actionList);
+    DLOG(@"b: %@",self.contactCopy.followupOptionList);
+    for (NSString *action in self.contactCopy.followupOptionList) {
+        BOOL found = NO;
+        for (NSString *_action in actionList) {
+            if ([action isEqualToString:_action]) {
+                found = YES;
+                break;
+            }
+        }
+        if (!found) {
+            [actionList addObject:action];
+        }
+    }
+    DLOG(@"c: %@",actionList);
+    
     // go to followup picker
     self.actionPicker = [[ActionPickerVC alloc] initWithNibName:nil bundle:nil];
-    self.actionPicker.actionList = [[BCRAccountManager defaultManager] eventWithEventID:self.contactCopy.eventID].followupOptionList;
+    self.actionPicker.actionList = actionList;
     self.actionPicker.contact = self.contactCopy;
     self.actionPicker.delegate = self;
     [self.navigationController pushViewController:self.actionPicker animated:YES];
