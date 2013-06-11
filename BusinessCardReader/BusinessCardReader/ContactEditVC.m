@@ -216,10 +216,10 @@
             cell.textLabel.text = @"First Name";
             cell.textField.text = self.contactCopy.firstName;
         }else if(indexPath.row == 1){
-            cell.textLabel.text = @"Last Name";
+            cell.textLabel.text = @"Last Name *";
             cell.textField.text = self.contactCopy.lastName;
         }else if(indexPath.row == 2){
-            cell.textLabel.text = @"Company";
+            cell.textLabel.text = @"Company *";
             cell.textField.text = self.contactCopy.company;
         }else if(indexPath.row == 3){
             cell.textLabel.text = @"Job";
@@ -240,7 +240,7 @@
         }
     }else if (indexPath.section == 3) {
         if(indexPath.row == 0){
-            cell.textLabel.text = @"Email";
+            cell.textLabel.text = @"Email *";
             cell.textField.text = self.contactCopy.email;
         }else if(indexPath.row == 1){
             cell.textLabel.text = @"Web";

@@ -31,9 +31,9 @@
     [super layoutSubviews]; // layouts the cell as UITableViewCellStyleValue2 would normally look like
     
     // change frame of one or more labels
-    self.textLabel.frame = CGRectMake(5, 0, 60, self.contentView.frame.size.height);
+    self.textLabel.frame = CGRectMake(5, 0, 65, self.contentView.frame.size.height);
     //    self.detailTextLabel.frame = CGRectMake(55, 0, 232, self.contentView.frame.size.height);
-    self.textField.frame = CGRectMake(70, 0, 217, self.contentView.frame.size.height); //CGRectMake(55, 8, 232, 21);
+    self.textField.frame = CGRectMake(75, 0, 212, self.contentView.frame.size.height); //CGRectMake(55, 8, 232, 21);
 }
 
 @end
