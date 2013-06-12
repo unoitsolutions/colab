@@ -174,7 +174,6 @@ static NSError *BCRAccountManagerSyncContactListError;
 {
     BCREvent *retVal = nil;
     for (BCREvent *_event in self.eventList) {
-        DLOG(@"%@ ==? %@",eventID,_event.eventID);
         if ([_event.eventID isEqualToString:eventID]) {
             retVal = _event;
             break;

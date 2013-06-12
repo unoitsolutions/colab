@@ -134,7 +134,8 @@ NSString *ContactEditSuccessfulNotificationName = @"ContactEditSuccessfulNotific
         return;
     }
     
-    
+//    DLOG(@"topic: %@",self.contactCopy.topicList);
+//    DLOG(@"topic: %@",self.contactCopy.topicOptionList);
     NSMutableArray *topicList = [NSMutableArray array];
     [topicList addObjectsFromArray:[[BCRAccountManager defaultManager] eventWithEventID:self.contactCopy.eventID].topicOptionList];
     for (NSString *topic in self.contactCopy.topicOptionList) {
@@ -455,10 +456,10 @@ NSString *ContactEditSuccessfulNotificationName = @"ContactEditSuccessfulNotific
 
 - (void)topicPicker:(TopicPickerVC *)picker didFinishPickingTopicsWithInfo:(NSDictionary *)info
 {
+//    DLOG(@"followup: %@",self.contactCopy.followupList);
+//    DLOG(@"followup: %@",self.contactCopy.followupOptionList);
     NSMutableArray *actionList = [NSMutableArray array];
     [actionList addObjectsFromArray:[[BCRAccountManager defaultManager] eventWithEventID:self.contactCopy.eventID].followupOptionList];
-    DLOG(@"a: %@",actionList);
-    DLOG(@"b: %@",self.contactCopy.followupOptionList);
     for (NSString *action in self.contactCopy.followupOptionList) {
         BOOL found = NO;
         for (NSString *_action in actionList) {
@@ -471,7 +472,6 @@ NSString *ContactEditSuccessfulNotificationName = @"ContactEditSuccessfulNotific
             [actionList addObject:action];
         }
     }
-    DLOG(@"c: %@",actionList);
     
     // go to followup picker
     self.actionPicker = [[ActionPickerVC alloc] initWithNibName:nil bundle:nil];

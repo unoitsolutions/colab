@@ -427,10 +427,10 @@ static NSError *BCRContactCardImageUploadError;
 //    NSString *contact = [contactRaw stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [manager doCardImageUpload:@{
-     @"userID":[[BCRAccountManager defaultManager] loggedInAccount].userID,
-     @"companyID":[[BCRAccountManager defaultManager] loggedInAccount].companyID,
-     @"authKey":[[BCRAccountManager defaultManager] loggedInAccount].authKey,
-     @"contact":contact,
+     @"userID":@"20",//[[BCRAccountManager defaultManager] loggedInAccount].userID,
+     @"companyID":@"73",//[[BCRAccountManager defaultManager] loggedInAccount].companyID,
+     @"authKey":@"0101010",//[[BCRAccountManager defaultManager] loggedInAccount].authKey,
+     @"contact":@"%7B%22user%22%3A%7B%7D%2C%22event%22%3A%7B%22id%22%3A1%2C%22appData%22%3A%7B%22id%22%3A1%7D%7D%2C%22contacts%22%3A%5B%7B%22id%22%3A%22-1%22%2C%22eventId%22%3A1%2C%22fields%22%3A%5B%7B%22fieldName%22%3A%22FollowUpAction%22%2C%22value%22%3A%22CallUrgent%22%7D%2C%7B%22fieldName%22%3A%22Topics%22%2C%22value%22%3A%22None%22%7D%5D%7D%5D%7D",//contact,
      @"image":UIImageJPEGRepresentation(self.image, 0.0)
      }];
     
