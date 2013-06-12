@@ -11,10 +11,18 @@
 #import "QueueManager.h"
 #import "BCRAccountManager.h"
 
+#import "PhotoCaptureVC.h"
+
+//transform values for full screen support
+#define CAMERA_TRANSFORM_X 1
+#define CAMERA_TRANSFORM_Y 1.2550
+
 @implementation CardCaptureVC
 
 - (void)presentInViewController:(UIViewController *)viewController animated:(BOOL)flag completion:(void (^)(void))completion
 {
+    NSLog(@"open camera!");
+    
     self.presentingViewController = viewController;
     
     self.imagePicker = [[UIImagePickerController alloc] init];
@@ -23,11 +31,32 @@
 #else
     self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 #endif
-    self.imagePicker.delegate = self;
+    
+    self.imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    self.imagePicker.showsCameraControls = NO;
+    self.imagePicker.navigationBarHidden = YES;
+    self.imagePicker.toolbarHidden = YES;
+    self.imagePicker.wantsFullScreenLayout = YES;
+    
+    self.imagePicker.cameraViewTransform = CGAffineTransformScale(self.imagePicker.cameraViewTransform,
+                                                                  CAMERA_TRANSFORM_X, CAMERA_TRANSFORM_Y);
+    
+    // Insert the overlay
+    PhotoCaptureVC *overlayView = [[PhotoCaptureVC alloc] init];
+    overlayView.pickerReference = self.imagePicker;
+    self.imagePicker.cameraOverlayView = overlayView.view;
+    self.imagePicker.delegate = overlayView;
+    
     [self.presentingViewController presentViewController:self.imagePicker
                                                 animated:flag
                                               completion:completion];
 
+}
+
+- (void)createCameraCapture
+{
+    
 }
 
 #pragma mark - UIImagePickerControllerDelegate Methods
