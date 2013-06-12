@@ -208,10 +208,10 @@
             cell.textLabel.text = @"First Name";
             cell.textField.text = self.contact.firstName;
         }if(indexPath.row == 1){
-            cell.textLabel.text = @"Last Name";
+            cell.textLabel.text = @"Last Name *";
             cell.textField.text = self.contact.lastName;
         }else if(indexPath.row == 2){
-            cell.textLabel.text = @"Company";
+            cell.textLabel.text = @"Company *";
             cell.textField.text = self.contact.company;
         }else if(indexPath.row == 3){
             cell.textLabel.text = @"Job";
@@ -232,7 +232,7 @@
         }
     }else if (indexPath.section == 3) {
         if(indexPath.row == 0){
-            cell.textLabel.text = @"Email";
+            cell.textLabel.text = @"Email *";
             cell.textField.text = self.contact.email;
         }else if(indexPath.row == 1){
             cell.textLabel.text = @"Web";
@@ -373,27 +373,45 @@
     
     contact.delegate = nil;
     
-    BOOL result = [[DB defaultManager] createContact:self.contact forEvent:[[BCRAccountManager defaultManager] currentEvent]];
-    if (!result) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"Unable to save changes. Please try again."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
-        return;
-    }
-    
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-    
     NSError *error = [info objectForKey:@"error"];  DLOG(@"error: %@",error);
     if (error) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to save changes. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+#warning remove debug code
+        BOOL result = [[DB defaultManager] createContact:self.contact forEvent:[[BCRAccountManager defaultManager] currentEvent]];
+        if (!result) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Unable to save changes. Please try again."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil];
+            [alert show];
+            return;
+        }
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"The changes have been saved." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
+        
+//        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+//        
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to save changes. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//        [alert show];
     }else{
+        BOOL result = [[DB defaultManager] createContact:self.contact forEvent:[[BCRAccountManager defaultManager] currentEvent]];
+        if (!result) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Unable to save changes. Please try again."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil];
+            [alert show];
+            return;
+        }
+        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"The changes have been saved." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
+    
 }
 
 #pragma mark - TopicPickerVCDelegate Methods

@@ -153,6 +153,11 @@
     
     BCREvent *event = [self.eventList objectAtIndex:indexPath.row];
     cell.textLabel.text = event.eventName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@%@%@",
+                                 (event.city.length>0 ? [NSString stringWithFormat:@" %@",event.city] : @""),
+                                 (event.state.length>0 ? [NSString stringWithFormat:@" %@",event.state] : @""),
+                                 (event.country.length>0 ? [NSString stringWithFormat:@" %@",event.country] : @"")
+                                 ];
     
     return cell;
 }
@@ -161,7 +166,7 @@
 
 - (CGFloat)tableView:tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
+    return 80;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

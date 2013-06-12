@@ -71,11 +71,18 @@ static NSError *APIManagerAuthenticationError;
                 [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/api/doLogin/%@",APIManagerInvalidResponseError.localizedDescription]];
                 
                 DLOG(@"url: %@",urlString);
+                DLOG(@"status code: %d",statusCode);
+                DLOG(@"input body: %@",inputBodyString);
                 DLOG(@"response: %@",[request responseString]);
                 
                 info = @{@"error":APIManagerInvalidResponseError};
             }else{
                 [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/api/doLogin/success"]];
+                
+                DLOG(@"url: %@",urlString);
+                DLOG(@"status code: %d",statusCode);
+                DLOG(@"input body: %@",inputBodyString);
+                DLOG(@"response: %@",[request responseString]);
                 
                 info = @{@"result":json };
             }
@@ -111,7 +118,7 @@ static NSError *APIManagerAuthenticationError;
 {
     [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/api/doGetEvents/"]];
     
-    NSString *companyID = [info objectForKey:@"companyID"];
+    NSString *companyID = [info objectForKey:@"companyID"]; DLOG(@"companyID: %@",companyID);
     NSString *authKey = [info objectForKey:@"authKey"];
     
     __block NSString *urlString = [NSString stringWithFormat:@"%@/cea/company/%@/app/%@/events",BASE_URL,companyID, APP_NAME];
@@ -202,7 +209,7 @@ static NSError *APIManagerAuthenticationError;
     [TestFlight passCheckpoint:[NSString stringWithFormat:@"atEvent.bcr/api/doGetContacts/"]];
     
     NSString *userID = [info objectForKey:@"userID"];
-    NSString *companyID = [info objectForKey:@"companyID"];
+    NSString *companyID = [info objectForKey:@"companyID"]; DLOG(@"companyID: %@",companyID);
     NSString *authKey = [info objectForKey:@"authKey"];
     
     __block NSString *urlString = [NSString stringWithFormat:@"%@/cea/company/%@/user/%@/contacts?appType=BCR",BASE_URL,companyID, userID];
@@ -444,7 +451,7 @@ static NSError *APIManagerAuthenticationError;
     NSString *authKey = [info objectForKey:@"authKey"];
     NSData *image = [info objectForKey:@"image"];
     
-    __block NSString *urlString = [NSString stringWithFormat:@"%@/cea/company/%@/user/%@/contact/%@/key/%@/contacts?op=readsave",BASE_URL,companyID, userID, contact,authKey];
+    __block NSString *urlString = [NSString stringWithFormat:@"%@/cea/company/%@/user/%@/contact/%@/key/%@/contacts?op=readsave",BASE_URL,companyID, userID,contact,authKey] ;
     
     __block NSData *inputBodyData = image;
     
@@ -485,6 +492,8 @@ static NSError *APIManagerAuthenticationError;
     [request setCompletionBlock:completionBlock];
     [request setFailedBlock:^{
         DLOG(@"error: %@",[request error]);
+        DLOG(@"urlstring: %@",urlString);
+        DLOG(@"url: %@",[request url].absoluteString);
         NSError *error = [request error];
         if ([error.domain isEqualToString:NetworkRequestErrorDomain] && error.code == ASIAuthenticationErrorType) {
             if ([self.delegate respondsToSelector:@selector(APIManager:didCardImageUpload:)]) {

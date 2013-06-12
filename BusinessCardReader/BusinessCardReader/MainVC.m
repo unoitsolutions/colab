@@ -164,6 +164,7 @@
 
 - (void)detailVC:(DetailVC *)vc cameraButtonTapped:(id)sender
 {
+#if !(TARGET_IPHONE_SIMULATOR)
     if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                         message:@"No camera found on this device."
@@ -173,6 +174,8 @@
         [alert show];
         return;
     }
+#endif
+    
     
     if(![BCRAccountManager defaultManager].currentEvent){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil

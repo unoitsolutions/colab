@@ -123,7 +123,7 @@ NSString *QueueManagerDidDequeueContactNotification = @"QueueManagerDidDequeueCo
 //    // update status
 //    [contact setStatus:BCRContactOCRProcessedStatus];
 //    [[DB defaultManager] updateContact:contact];
-//    
+//
 //    // upload contact
 //    [contact doContactUpload];
 //}

@@ -18,7 +18,11 @@
     self.presentingViewController = viewController;
     
     self.imagePicker = [[UIImagePickerController alloc] init];
+#if !(TARGET_IPHONE_SIMULATOR)
     self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+#else
+    self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+#endif
     self.imagePicker.delegate = self;
     [self.presentingViewController presentViewController:self.imagePicker
                                                 animated:flag

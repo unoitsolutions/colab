@@ -25,7 +25,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -33,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ContactEditSuccessfulNotificationHandler:) name:ContactEditSuccessfulNotificationName object:nil];
     
     self.view.backgroundColor = [[BCRAccountManager defaultManager] defaultBGColor];
     self.navigationBar.backgroundColor = [[BCRAccountManager defaultManager] defaultNavbarBGColor];
@@ -47,12 +49,15 @@
 
 - (void)viewDidUnload
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:ContactEditSuccessfulNotificationName object:nil];
+    
     [self setImageView:nil];
     [self setNameLabel:nil];
     [self setCompanyLabel:nil];
     [self setJobLabel:nil];
     [self setNavigationBar:nil];
     [self setBackButton:nil];
+    [self setTableView:nil];
     [super viewDidUnload];
 }
 
@@ -80,6 +85,18 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
+#pragma mark - Operations
+
+- (void)reloadData
+{
+    if(self.contact.image) self.imageView.image = self.contact.image;
+    self.nameLabel.text = [NSString stringWithFormat:@"%@%@",(!self.contact.firstName.isNull ? [NSString stringWithFormat:@"%@ ",self.contact.firstName] : @""),self.contact.lastName];
+    self.companyLabel.text = self.contact.company;
+    self.jobLabel.text = self.contact.job;
+ 
+    [self.tableView reloadData];
+}
+
 #pragma mark - Action Methods
 
 - (IBAction)backButtonTapped:(id)sender
@@ -90,6 +107,7 @@
 - (IBAction)editButtonTapped:(id)sender
 {   
     ContactEditVC *vc = [[ContactEditVC alloc] initWithNibName:nil bundle:nil];
+    vc.delegate = self.delegate;
     vc.contact = self.contact;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -97,13 +115,17 @@
 - (IBAction)zoomButtonTapped:(id)sender
 {
     PhotoViewerVC *vc = [[PhotoViewerVC alloc] initWithImage:self.imageView.image];
-    [self presentViewController:vc animated:YES completion:^{
+    id rootVC = [[[[[UIApplication sharedApplication] keyWindow] subviews] objectAtIndex:0] nextResponder];
+    [(UIViewController *)rootVC presentViewController:vc animated:YES completion:^{
         
     }];
 }
 
 - (IBAction)cameraButtonTapped:(id)sender
 {
+    if ([self.delegate respondsToSelector:@selector(detailVC:cameraButtonTapped:)]) {
+        [self.delegate detailVC:self cameraButtonTapped:sender];
+    }
 }
 
 #pragma mark - Table view data source
@@ -212,6 +234,13 @@
     }else{
         return 37;
     }
+}
+
+#pragma mark - ContactEditSuccessfulNotificationHandler methods
+
+- (void)ContactEditSuccessfulNotificationHandler:(NSNotification *)note
+{
+    [self reloadData];
 }
 
 @end

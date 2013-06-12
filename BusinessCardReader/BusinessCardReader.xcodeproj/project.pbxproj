@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7986920E176489CE00BE1B5D /* checkbox_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7986920A176489CE00BE1B5D /* checkbox_checked@2x.png */; };
+		7986920F176489CE00BE1B5D /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7986920B176489CE00BE1B5D /* checkbox@2x.png */; };
+		79869210176489CE00BE1B5D /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 7986920C176489CE00BE1B5D /* close.png */; };
+		79869211176489CE00BE1B5D /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7986920D176489CE00BE1B5D /* close@2x.png */; };
+		79E401811764427300E18865 /* CheckmarkGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E401761764427300E18865 /* CheckmarkGreen.png */; };
+		79E401821764427300E18865 /* CheckmarkGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E401771764427300E18865 /* CheckmarkGreen@2x.png */; };
+		79E401831764427300E18865 /* CheckmarkGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E401781764427300E18865 /* CheckmarkGrey.png */; };
+		79E401841764427300E18865 /* CheckmarkGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E401791764427300E18865 /* CheckmarkGrey@2x.png */; };
+		79E401851764427300E18865 /* CheckmarkProfileImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E4017A1764427300E18865 /* CheckmarkProfileImage@2x.png */; };
+		79E401861764427300E18865 /* DeleteGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E4017B1764427300E18865 /* DeleteGrey.png */; };
+		79E401871764427300E18865 /* DeleteGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E4017C1764427300E18865 /* DeleteGrey@2x.png */; };
+		79E401881764427300E18865 /* DeleteRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E4017D1764427300E18865 /* DeleteRed.png */; };
+		79E401891764427300E18865 /* DeleteRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E4017E1764427300E18865 /* DeleteRed@2x.png */; };
+		79E4018A1764427300E18865 /* RMSwipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E401801764427300E18865 /* RMSwipeTableViewCell.m */; };
+		79E4018D176444E300E18865 /* ContactListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E4018C176444E300E18865 /* ContactListCell.m */; };
 		9E08ADD3176030180055F072 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E08ADD2176030180055F072 /* AddressBookUI.framework */; };
 		9E08ADD5176035B60055F072 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E08ADD4176035B60055F072 /* AddressBook.framework */; };
 		9E38CCBA1739F1E700EF76A0 /* ScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E38CCB81739F1E600EF76A0 /* ScanVC.m */; };
@@ -291,6 +306,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7986920A176489CE00BE1B5D /* checkbox_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_checked@2x.png"; sourceTree = "<group>"; };
+		7986920B176489CE00BE1B5D /* checkbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox@2x.png"; sourceTree = "<group>"; };
+		7986920C176489CE00BE1B5D /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		7986920D176489CE00BE1B5D /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		79E401761764427300E18865 /* CheckmarkGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckmarkGreen.png; sourceTree = "<group>"; };
+		79E401771764427300E18865 /* CheckmarkGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckmarkGreen@2x.png"; sourceTree = "<group>"; };
+		79E401781764427300E18865 /* CheckmarkGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckmarkGrey.png; sourceTree = "<group>"; };
+		79E401791764427300E18865 /* CheckmarkGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckmarkGrey@2x.png"; sourceTree = "<group>"; };
+		79E4017A1764427300E18865 /* CheckmarkProfileImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckmarkProfileImage@2x.png"; sourceTree = "<group>"; };
+		79E4017B1764427300E18865 /* DeleteGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeleteGrey.png; sourceTree = "<group>"; };
+		79E4017C1764427300E18865 /* DeleteGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeleteGrey@2x.png"; sourceTree = "<group>"; };
+		79E4017D1764427300E18865 /* DeleteRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeleteRed.png; sourceTree = "<group>"; };
+		79E4017E1764427300E18865 /* DeleteRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeleteRed@2x.png"; sourceTree = "<group>"; };
+		79E4017F1764427300E18865 /* RMSwipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSwipeTableViewCell.h; sourceTree = "<group>"; };
+		79E401801764427300E18865 /* RMSwipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSwipeTableViewCell.m; sourceTree = "<group>"; };
+		79E4018B176444E300E18865 /* ContactListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListCell.h; sourceTree = "<group>"; };
+		79E4018C176444E300E18865 /* ContactListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListCell.m; sourceTree = "<group>"; };
 		9E08ADD2176030180055F072 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		9E08ADD4176035B60055F072 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		9E38CCB71739F1E600EF76A0 /* ScanVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanVC.h; sourceTree = "<group>"; };
@@ -694,6 +726,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79E401751764427300E18865 /* RMSwipe */ = {
+			isa = PBXGroup;
+			children = (
+				79E401761764427300E18865 /* CheckmarkGreen.png */,
+				79E401771764427300E18865 /* CheckmarkGreen@2x.png */,
+				79E401781764427300E18865 /* CheckmarkGrey.png */,
+				79E401791764427300E18865 /* CheckmarkGrey@2x.png */,
+				79E4017A1764427300E18865 /* CheckmarkProfileImage@2x.png */,
+				79E4017B1764427300E18865 /* DeleteGrey.png */,
+				79E4017C1764427300E18865 /* DeleteGrey@2x.png */,
+				79E4017D1764427300E18865 /* DeleteRed.png */,
+				79E4017E1764427300E18865 /* DeleteRed@2x.png */,
+				79E4017F1764427300E18865 /* RMSwipeTableViewCell.h */,
+				79E401801764427300E18865 /* RMSwipeTableViewCell.m */,
+			);
+			path = RMSwipe;
+			sourceTree = "<group>";
+		};
 		9E6986FB171256340072F0C7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -862,6 +912,8 @@
 				9EE5D1DA173A18CA00912402 /* ContactListVC.h */,
 				9EE5D1DB173A18CA00912402 /* ContactListVC.m */,
 				9EE5D1DC173A18CA00912402 /* ContactListVC.xib */,
+				79E4018B176444E300E18865 /* ContactListCell.h */,
+				79E4018C176444E300E18865 /* ContactListCell.m */,
 				9E80BF02173AFA8100C59550 /* ContactDetailVC.h */,
 				9E80BF03173AFA8600C59550 /* ContactDetailVC.m */,
 				9E80BF04173AFA8D00C59550 /* ContactDetailVC.xib */,
@@ -973,7 +1025,11 @@
 				9EE9EB281752CDB900CF1762 /* black_search_btn.png */,
 				9EE9EB2A1752CDBB00CF1762 /* black_search_btn@2x.png */,
 				9E98772116F9691B002F1581 /* checkbox.png */,
+				7986920B176489CE00BE1B5D /* checkbox@2x.png */,
 				9E98772016F9691B002F1581 /* checkbox_checked.png */,
+				7986920A176489CE00BE1B5D /* checkbox_checked@2x.png */,
+				7986920C176489CE00BE1B5D /* close.png */,
+				7986920D176489CE00BE1B5D /* close@2x.png */,
 				9EE9EB01175178D100CF1762 /* contact_btn.png */,
 				9EE9EB02175178D200CF1762 /* contact_btn@2x.png */,
 				9E80BF09173B19F200C59550 /* contact_row1_bg.png */,
@@ -1002,6 +1058,8 @@
 				9EE9EB03175178D300CF1762 /* email_btn@2x.png */,
 				9EE9EB101752C24000CF1762 /* logout_icn.png */,
 				9EE9EB171752C24600CF1762 /* logout_icn@2x.png */,
+				9E9C7D0E170FB7C9004E8890 /* menu bar */,
+				9E7852DF1702808500BBA315 /* menu icons */,
 				9E9C7D0A170E6CDF004E8890 /* menu_icon.png */,
 				9E9C7D0B170E6CDF004E8890 /* menu_icon@2x.png */,
 				9E6E6B2917558625001287D6 /* navbar_back_btn.png */,
@@ -1016,6 +1074,7 @@
 				9E80BEF3173AD83C00C59550 /* scan_camera_btn@2x.png */,
 				9EE9EB121752C24200CF1762 /* scan_icn.png */,
 				9EE9EB181752C24700CF1762 /* scan_icn@2x.png */,
+				9E9C7D0F170FB7E8004E8890 /* share icons */,
 				9E80BEE6173AD48700C59550 /* share_facebook_btn.png */,
 				9E80BEE7173AD48700C59550 /* share_facebook_btn@2x.png */,
 				9EE9EB131752C24300CF1762 /* share_icn.png */,
@@ -1028,9 +1087,6 @@
 				9E4F0B4217431C9A00EFB911 /* topic_row_bg@2x.png */,
 				9E4F0B4317431C9B00EFB911 /* topic_row_highlighted_bg.png */,
 				9E4F0B4417431C9B00EFB911 /* topic_row_highlighted_bg@2x.png */,
-				9E9C7D0E170FB7C9004E8890 /* menu bar */,
-				9E7852DF1702808500BBA315 /* menu icons */,
-				9E9C7D0F170FB7E8004E8890 /* share icons */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1038,6 +1094,7 @@
 		9E98772C16FAA1ED002F1581 /* ExternalAPIs */ = {
 			isa = PBXGroup;
 			children = (
+				79E401751764427300E18865 /* RMSwipe */,
 				9EB6004E173223440087FDA5 /* TSMessages */,
 				9ED61414171504FB00A1942D /* SVPullToRefresh */,
 				9E69881317126EA20072F0C7 /* TestFlightSDK1.2.4 */,
@@ -1618,6 +1675,19 @@
 				9EFCC8C417531EFB0044C099 /* ContactCreateVC.xib in Resources */,
 				9E6E6B2B17558625001287D6 /* navbar_back_btn.png in Resources */,
 				9E6E6B2C17558625001287D6 /* navbar_back_btn@2x.png in Resources */,
+				79E401811764427300E18865 /* CheckmarkGreen.png in Resources */,
+				79E401821764427300E18865 /* CheckmarkGreen@2x.png in Resources */,
+				79E401831764427300E18865 /* CheckmarkGrey.png in Resources */,
+				79E401841764427300E18865 /* CheckmarkGrey@2x.png in Resources */,
+				79E401851764427300E18865 /* CheckmarkProfileImage@2x.png in Resources */,
+				79E401861764427300E18865 /* DeleteGrey.png in Resources */,
+				79E401871764427300E18865 /* DeleteGrey@2x.png in Resources */,
+				79E401881764427300E18865 /* DeleteRed.png in Resources */,
+				79E401891764427300E18865 /* DeleteRed@2x.png in Resources */,
+				7986920E176489CE00BE1B5D /* checkbox_checked@2x.png in Resources */,
+				7986920F176489CE00BE1B5D /* checkbox@2x.png in Resources */,
+				79869210176489CE00BE1B5D /* close.png in Resources */,
+				79869211176489CE00BE1B5D /* close@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1735,6 +1805,8 @@
 				9EE0591E174C888700281FB7 /* ContactEditVC.m in Sources */,
 				9EFCC8C317531EFB0044C099 /* ContactCreateVC.m in Sources */,
 				9EFCC8C7175326080044C099 /* ContactEditCell.m in Sources */,
+				79E4018A1764427300E18865 /* RMSwipeTableViewCell.m in Sources */,
+				79E4018D176444E300E18865 /* ContactListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1789,8 +1861,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pinuno Fuentes (5J66Y3S3BK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1805,7 +1877,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "0C561DA1-3591-40B0-9CBF-934EC0ED9535";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1822,8 +1894,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pinuno Fuentes (5J66Y3S3BK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1831,7 +1903,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "0C561DA1-3591-40B0-9CBF-934EC0ED9535";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1840,7 +1912,8 @@
 		9E9876D616F80119002F1581 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pinuno Fuentes (5J66Y3S3BK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jason  Kobilka (7T66ZP65PR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason  Kobilka (7T66ZP65PR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BusinessCardReader/BusinessCardReader-Prefix.pch";
 				INFOPLIST_FILE = "BusinessCardReader/BusinessCardReader-Info.plist";
@@ -1851,6 +1924,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "13ED1529-391C-43B3-8A53-F2CA2FDE8481";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0C561DA1-3591-40B0-9CBF-934EC0ED9535";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1859,7 +1933,8 @@
 		9E9876D716F80119002F1581 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pinuno Fuentes (5J66Y3S3BK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jason  Kobilka (7T66ZP65PR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason  Kobilka (7T66ZP65PR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BusinessCardReader/BusinessCardReader-Prefix.pch";
 				INFOPLIST_FILE = "BusinessCardReader/BusinessCardReader-Info.plist";
@@ -1870,6 +1945,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "13ED1529-391C-43B3-8A53-F2CA2FDE8481";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0C561DA1-3591-40B0-9CBF-934EC0ED9535";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

@@ -8,16 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailVC.h"
+#import "RMSwipeTableViewCell.h"
 
-@interface ContactListVC : DetailVC
+@interface ContactListVC : DetailVC 
 
-@property (strong, nonatomic) NSMutableArray *contactList;
+@property (strong, nonatomic) NSMutableArray *contactList, *contactListBackUp;
 @property (nonatomic) BOOL isReloading;
 
 @property (weak, nonatomic) IBOutlet UIView *navigationBar;
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 
 - (IBAction)menuButtonTapped:(id)sender;
 - (IBAction)cameraButtonTapped:(id)sender;

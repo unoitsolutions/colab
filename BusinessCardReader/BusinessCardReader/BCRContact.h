@@ -21,10 +21,8 @@ typedef enum {
 typedef enum{
     BCRContactCreatedStatus,
     BCRContactUploadedStatus,
-    BCRContactProcessedStatus
-//    BCRContactOCRProcessedStatus,
-//    BCRContactUploadedStatus,
-//    BCRContactLRSSubmittedStatus
+    BCRContactProcessedStatus,
+    BCRContactDeletedStatus,
 } BCRContactStatus;
 
 @class BCRContact;
@@ -59,7 +57,6 @@ typedef enum{
 - (void)populatePropertiesWithData:(NSData *)xmlData;
 - (NSError *)saveToDevice;
 
-- (void)doDelete;
 - (void)doContactUpload;
 - (void)doCardImageUpload;
 
