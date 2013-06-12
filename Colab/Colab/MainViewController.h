@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 - (IBAction)photoViewerButtonClicked:(id)sender;
 - (IBAction)photoCaptureButtonClicked:(id)sender;

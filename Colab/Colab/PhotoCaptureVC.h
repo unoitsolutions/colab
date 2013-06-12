@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoCaptureVC : UIViewController
+@interface PhotoCaptureVC : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
