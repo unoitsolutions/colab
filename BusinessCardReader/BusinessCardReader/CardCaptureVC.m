@@ -28,9 +28,6 @@
     self.imagePicker = [[UIImagePickerController alloc] init];
 #if !(TARGET_IPHONE_SIMULATOR)
     self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-#else
-    self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-#endif
     
     self.imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
     self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
@@ -47,6 +44,10 @@
     overlayView.pickerReference = self.imagePicker;
     self.imagePicker.cameraOverlayView = overlayView.view;
     self.imagePicker.delegate = overlayView;
+#else
+    self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    self.imagePicker.delegate = self;
+#endif
     
     [self.presentingViewController presentViewController:self.imagePicker
                                                 animated:flag
